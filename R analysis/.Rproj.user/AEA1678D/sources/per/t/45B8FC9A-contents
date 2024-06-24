@@ -1,0 +1,76 @@
+---
+title: "Collate_rfp_cds_counts[20230523]"
+output: html_notebook
+---
+
+I have RFP .bam files in ./data.
+I need riboWaltz to process these data. Before that, I need to create annotation_dt based on the custom gencode annotation that represents the canonical transcriptome that I'm aligning my Riboseq data to.
+annotation_dt has to be a data.table data.frame object.
+
+
+```{r}
+
+library(data.table)
+annotation_dt <- setDT(read.table(
+  file = "gencode.v43.pc_transcripts.EnsemblCanonical.protein_coding_utr5_cds_utr3_length.tsv", sep = "\t", header = TRUE))
+
+```
+
+Convert .bam files to reads_list.
+I also ran the default commands that riboWaltz recommends.
+This is all using default settings, without any filtering of reads that do not follow periodicity nicely.
+
+```{r}
+
+library(riboWaltz)
+reads_list <- bamtolist(bamfolder = "./data/", annotation = annotation_dt, refseq_sep = "|")
+psite_offset <- psite(reads_list, flanking = 6, extremity = "auto")
+reads_psite_list <- psite_info(reads_list, psite_offset)
+codon_coverage_example <- codon_coverage(reads_psite_list, annotation_dt, psite = FALSE)
+cds_coverage_example <- cds_coverage(reads_psite_list, annotation_dt)
+
+```
+
+Now, I want to try generating periodicity graphs
+
+```{r}
+example_length_dist_rep <- rlength_distr(reads_list,
+                                         sample = list("Samp_avg" = c("Samp1", "Samp2")),
+                                         cl = 99, multisamples = "average",
+                                         colour = "gray70")
+example_length_dist_rep[["plot"]] 
+```
+
+If I want to check read counts against positions in a given RFP sample:
+
+```{r}
+#To plot read counts against position given a particular gene in a given sample:
+#Input trancsript_id and sample name in reads_psite_list
+transcript_id = "ENST00000519479.2"
+reads_psite_sample = "wt_dep_rep1_RFP_Aligned.toTranscriptome.out"
+
+psite_counts <- reads_psite_list$reads_psite_sample[
+  reads_psite_list$reads_psite_sample$transcript == transcript_id,]$psite
+
+library(tidyr)
+library(dplyr)
+
+# Convert counts table to data frame, change th
+counts <- as.data.frame(table(psite_counts))
+colnames(counts) <- c("Position", "ReadCount")
+
+# Generate a sequence of numbers from 0 or min. number to the max. number
+counts$Position <- as.numeric(as.character(counts$Position))
+number_range <- seq(pmin(min(counts$Position), 0), max(counts$Position))
+
+# Complete the data frame with missing numbers and set their counts to 0
+counts_complete <- counts %>%
+  complete(Position = number_range) %>%
+  replace_na(list(ReadCount = 0))
+
+ggplot(counts_complete, aes(x = Position, y = ReadCount)) +
+  geom_line() +
+  labs(x = "Position", y = "Read Count", title = "Read Counts vs. Positions") +
+  theme_minimal()
+```
+

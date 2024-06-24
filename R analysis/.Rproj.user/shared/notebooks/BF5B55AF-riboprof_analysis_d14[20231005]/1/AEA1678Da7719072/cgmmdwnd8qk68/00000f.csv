@@ -1,0 +1,3 @@
+"0","# perform voom"
+"0",""
+"0","v_te = voom(data_all, design_all, plot=TRUE)"

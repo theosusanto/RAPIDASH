@@ -1,0 +1,25 @@
+{
+    "id": "45B8FC9A",
+    "path": "C:/Users/teoth/Documents/GitHub/ribosome_profiling/R analysis/collate_rfp_cds_counts.Rmd",
+    "project_path": "collate_rfp_cds_counts.Rmd",
+    "type": "r_markdown",
+    "hash": "3782167855",
+    "contents": "",
+    "dirty": false,
+    "created": 1696527358961.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "chunk_output_type": "inline",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1684898244,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1684898244,
+    "read_only": false,
+    "read_only_alternatives": []
+}

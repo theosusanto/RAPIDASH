@@ -1,0 +1,51 @@
+"0","reads_psite_list <- psite_info(bam_list, offsets,"
+"0","                               fastapath = ""ref/GRCh38.primary_assembly.genome.fa"", "
+"0","                               fasta_genome = TRUE, refseq_sep = "" "","
+"0","                               gtfpath = ""ref/gencode.v43.primary_assembly.basic.annotation.gtf"")"
+"1","processing hiND14_Nterm_rep_1_RFP
+"
+"1","1. adding p-site position
+"
+"1","2. adding transcript region
+"
+"1","processing hiND14_Nterm_rep_2_RFP
+"
+"1","1. adding p-site position
+"
+"1","2. adding transcript region
+"
+"1","processing hiND14_Nterm_rep_3_RFP
+"
+"1","1. adding p-site position
+"
+"1","2. adding transcript region
+"
+"1","processing hiND14_wt_rep_1_RFP
+"
+"1","1. adding p-site position
+"
+"1","2. adding transcript region
+"
+"1","processing hiND14_wt_rep_2_RFP
+"
+"1","1. adding p-site position
+"
+"1","2. adding transcript region
+"
+"1","processing hiND14_wt_rep_3_RFP
+"
+"1","1. adding p-site position
+"
+"1","2. adding transcript region
+"
+"0","# reads_psite_list <- psite_info(bam_list, offsets, site=c(""psite"", ""asite"", ""esite""),"
+"0","#                                fastapath = ""ref/GRCh38.primary_assembly.genome.fa"","
+"0","#                                fasta_genome = TRUE, refseq_sep = "" "","
+"0","#                                gtfpath = ""ref/gencode.v43.primary_assembly.basic.annotation.gtf"")"
+"0",""
+"0","#for (i in 1:length(reads_psite_list)){"
+"0","#  sample_name <- names(reads_psite_list[i])"
+"0","#  write.table(reads_psite_list[i], paste(""output/20230722_hiND14/"", sample_name, ""_p-site-list.tsv"", sep=""""), "
+"0","#              sep = ""\t"", row.names = FALSE)"
+"0","#}"
+"0",""

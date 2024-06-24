@@ -1,0 +1,8 @@
+"0",""
+"0",""
+"0","# here is where I actually filter out the low-expressed genes from data_rfp"
+"0","data_rfp = data_rfp[keep_cpm, keep.lib.sizes=FALSE]"
+"0",""
+"0","lcpm <- cpm(data_rfp, log=TRUE)"
+"0",""
+"0","plot(density(lcpm[,1]), col=col[1], lwd=2, ylim=c(0,0.26), las=2, main="""", xlab="""")"

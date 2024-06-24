@@ -1,0 +1,4 @@
+"0","name_for_tid = mart[,""Gene.name""]"
+"0","names(name_for_tid) = rownames(mart)"
+"0","rownames(counts) = paste(name_for_tid[rownames(counts)], rownames(counts), sep='_')"
+"0","counts[1:10,]"

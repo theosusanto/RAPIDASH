@@ -1,0 +1,4 @@
+"0","for (i in 2:nsamples){"
+"0","    den <- density(lcpm[,i])"
+"0","    lines(den$x, den$y, col=col[i], lwd=2)"
+"0","}"

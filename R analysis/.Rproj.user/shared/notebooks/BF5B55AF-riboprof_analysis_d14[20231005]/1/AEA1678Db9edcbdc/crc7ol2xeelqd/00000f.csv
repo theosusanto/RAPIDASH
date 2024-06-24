@@ -1,0 +1,7 @@
+"0","# first analyze only the RNA samples on their own"
+"0",""
+"0","counts_rna = counts[,samples$RFP_or_RNA=='RNA']"
+"0","samples_rna = samples[samples$RFP_or_RNA=='RNA',]"
+"0","group_rna = samples_rna$grouping"
+"0",""
+"0","data_rna = DGEList(counts = counts_rna, samples = samples_rna, group = group_rna)"

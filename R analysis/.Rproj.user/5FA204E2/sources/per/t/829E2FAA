@@ -1,0 +1,26 @@
+{
+    "id": "829E2FAA",
+    "path": "~/GitHub/ribosome_profiling/R analysis/script/plot_start_distances_20230724.R",
+    "project_path": "script/plot_start_distances_20230724.R",
+    "type": "r_source",
+    "hash": "3933485930",
+    "contents": "",
+    "dirty": false,
+    "created": 1690224141681.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "72,0",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1690224346,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1690224346736,
+    "read_only": false,
+    "read_only_alternatives": []
+}

@@ -1,0 +1,1 @@
+"0","plotMDS(lcpm, labels=rownames(data_all$samples), dim.plot=c(3,4))"

@@ -1,0 +1,33 @@
+"0","offsets <- psite(data = bam_list)"
+"1","processing hiND14_Nterm_rep_1_RFP
+"
+"1","best offset: 12 nts from the 5' end
+"
+"1","processing hiND14_Nterm_rep_2_RFP
+"
+"1","best offset: 11 nts from the 5' end
+"
+"1","processing hiND14_Nterm_rep_3_RFP
+"
+"1","best offset: 11 nts from the 5' end
+"
+"1","processing hiND14_wt_rep_1_RFP
+"
+"1","best offset: 11 nts from the 5' end
+"
+"1","processing hiND14_wt_rep_2_RFP
+"
+"1","best offset: 12 nts from the 5' end
+"
+"1","processing hiND14_wt_rep_3_RFP
+"
+"1","best offset: 12 nts from the 5' end
+"
+"0","samples <- unique(offsets$sample)"
+"0","for (i in 1:length(samples)) {"
+"0","  sam_offs <- subset(offsets, sample == samples[i], "
+"0","                    select = c(""length"", ""corrected_offset_from_3""))"
+"0","  colnames(sam_offs) <- c(""length"", ""p_offset"")"
+"0","  write.table(sam_offs, paste(""output/20230722_hiND14/"", samples[i], ""_p-site-offsets.tsv"", sep=""""), "
+"0","              sep = ""\t"", row.names = FALSE)"
+"0","}"

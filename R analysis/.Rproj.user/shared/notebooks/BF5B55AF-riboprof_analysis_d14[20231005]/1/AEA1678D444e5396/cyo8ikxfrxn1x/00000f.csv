@@ -1,0 +1,3 @@
+"0","# perform voom"
+"0",""
+"0","v_rfp = voom(data_rfp, design_rfp, plot=TRUE)"

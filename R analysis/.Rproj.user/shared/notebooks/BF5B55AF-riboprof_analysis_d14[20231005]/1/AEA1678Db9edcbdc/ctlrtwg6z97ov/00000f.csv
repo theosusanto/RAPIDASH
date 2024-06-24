@@ -1,0 +1,6 @@
+"0","for(n in names(reads_psite_list)) {"
+"0","  reads_psite_list[[n]] <- reads_psite_list[[n]][!which(reads_psite_list[[n]]$psite_region == ""3utr"")]"
+"0","  reads_psite_list[[n]] <- reads_psite_list[[n]][!which(reads_psite_list[[n]]$psite_region == ""cds"" & reads_psite_list[[n]]$end3 < reads_psite_list[[n]]$psite + 3)]"
+"0","  reads_psite_list[[n]] <- reads_psite_list[[n]][!is.na(reads_psite_list[[n]]$psite_region)]"
+"0","  reads_psite_list[[n]][, c(""stable_id"", ""version"") := tstrsplit(transcript, ""\\."")]"
+"0","}"

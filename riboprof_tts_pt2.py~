@@ -1,0 +1,74 @@
+### pipeline part 2
+
+import argparse
+import glob
+import os
+import shutil
+import subprocess
+import json
+
+parser = argparse.ArgumentParser(description = "Run part 2 of ribosome profiling pipeline (all steps performed on individual samples)")
+parser.add_argument("--root_dir")
+parser.add_argument("--sb_name")
+parser.add_argument("--sb_time", default = "12:0:0")
+parser.add_argument("--sb_mem", default = "32G")
+parser.add_argument("--sb_cpus", default = "4")
+args = parser.parse_args()
+
+# expect logs directory to have been made in pipeline part 1
+log_dir = os.path.join(args.root_dir, "logs")
+
+# if not already made, make directories for stages 3 and beyond
+stage_dir = [os.path.join(args.root_dir, "stage"+str(i)) for i in range(0,10)]
+for sd in stage_dir[3:10]:
+    os.makedirs(sd, exist_ok=True)
+#i.e. '/labs/mbarna/users/adelexu/s27l-flag-riboprof/stage0'
+
+# make sample directories in stage 2, and move stage 2 files there -- uncomment when running for first time
+#st2fq_suffix = "_stage2bcmatched.fastq"
+#for st2fq in glob.glob(f"{stage_dir[2]}/*{st2fq_suffix}"):
+#    sample_dir_short = os.path.basename(st2fq).replace(st2fq_suffix, "")
+#    sample_dir = os.path.join(stage_dir[2], sample_dir_short)
+#    os.makedirs(sample_dir, exist_ok=True)
+#    shutil.move(st2fq, sample_dir)
+
+# find sample directories in stage 2 directory and make similar ones in stage 3-10 directories, excluding "unmatched"
+sample_name = next(os.walk(stage_dir[2]))[1]
+matched_name = [i for i in sample_name if "unmatched" not in i]
+#i.e. '191217_lane3_2c4totrfp'
+print(sample_name)
+print(matched_name)
+
+# uncomment if running for the first time
+#for m in matched_name:
+#    for stdr in stage_dir[3:10]:
+#        os.makedirs(os.path.join(stdr, m), exist_ok=True)
+
+# names of input and output files at each step/stage
+# note that step X takes in stage X and outputs stage X+1
+stage2_fq = [os.path.join(stage_dir[2], m, m+"_stage2bcmatched.fastq") for m in matched_name]
+
+stage3_log = [os.path.join(stage_dir[3], m, m+"_extract_log.txt") for m in matched_name]
+stage3_fqgz = [os.path.join(stage_dir[3], m, m+"_stage3umibcextracted.fastq.gz") for m in matched_name]
+
+stage4_fqgz = [os.path.join(stage_dir[4], m, m+"_stage4qualfiltered.fastq.gz") for m in matched_name]
+
+rtsnRNA_index = "/labs/mbarna/index/rRNAtRNAsnRNA"
+stage5_al_sam = [os.path.join(stage_dir[5], m, m+"_stage5alignedrtsnRNA.sam") for m in matched_name]
+stage5_notal_fq = [os.path.join(stage_dir[5], m, m+"_stage5notalignedrtsnRNA.fastq") for m in matched_name]
+
+canonical_index = "/labs/mbarna/index/mm10/mm10_knownCanonical_GENCODE_VM20_highconf_final"
+stage6_al_sam = [os.path.join(stage_dir[6], m, m+"_stage6alignedcanonical.sam") for m in matched_name]
+stage6_al_fq = [os.path.join(stage_dir[6], m, m+"_stage6alignedcanonical.fastq") for m in matched_name]
+stage6_notal_fq = [os.path.join(stage_dir[6], m, m+"_stage6notalignedcanonical.fastq") for m in matched_name]
+
+stage7_al_bam = [os.path.join(stage_dir[7], m, m+"_stage7alignedcanonical.bam") for m in matched_name]
+stage7_sorted = [os.path.join(stage_dir[7], m, m+"_stage7sorted.bam") for m in matched_name]
+
+stage8_stats = [os.path.join(stage_dir[8], m, m+"_stage8stats") for m in matched_name]
+stage8_bam = [os.path.join(stage_dir[8], m, m+"_stage8dedup.bam") for m in matched_name]
+
+stage9_bam = [os.path.join(stage_dir[9], m, m+"_stage9resort.bam") for m in matched_name]
+
+sb_defaults = "-e %x-%j.e -o %x-%j.o -A mbarna -p batch"
+

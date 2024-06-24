@@ -1,0 +1,4 @@
+"0","write.csv(all_fc_sig, file = ""all_fc_sig_hiNs_d14.csv"", quote = FALSE, sep = "","", row.names = FALSE)
+"
+"2","Warning: attempt to set 'sep' ignored"
+"0",""

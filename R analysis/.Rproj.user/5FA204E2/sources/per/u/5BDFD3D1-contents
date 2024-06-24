@@ -1,0 +1,41 @@
+library(data.table)
+library(GenomicFeatures)
+library(Biostrings)
+
+path_to_gtf <- "data/Try2/gencode.v43.primary_assembly.basic.annotation.gtf"
+fastapath <- "data/Try2/GRCh38.primary_assembly.genome.fa"
+tr_name <- "ENST00000294168.8"
+refseq_sep <- " "
+
+txdbanno <- GenomicFeatures::makeTxDbFromGFF(file = path_to_gtf,
+                                             format = "gtf",
+                                             dataSource = NA,
+                                             organism = NA)
+
+refseq_sep <- " "
+temp_sequences <- Biostrings::readDNAStringSet(fastapath, format = "fasta", use.names = TRUE)
+if(length(refseq_sep) != 0){
+  names(temp_sequences) <- tstrsplit(names(temp_sequences), refseq_sep, fixed = TRUE, keep = 1)[[1]]
+}
+
+exon <- suppressWarnings(GenomicFeatures::exonsBy(txdbanno, by = "tx", use.names = TRUE))
+exon <- as.data.table(exon[unique(names(exon))])
+sub_exon_plus <- exon[as.character(seqnames) %in% names(temp_sequences) & strand == "+"]
+sub_exon_minus <- exon[as.character(seqnames) %in% names(temp_sequences) & strand == "-"
+                       ][, new_end := Biostrings::width(temp_sequences[as.character(seqnames)]) - start + 1
+                         ][, new_start := Biostrings::width(temp_sequences[as.character(seqnames)]) - end + 1]
+
+seq_dt_plus <- sub_exon_plus[, nt_seq := "emp"
+                             ][, nt_seq := as.character(Biostrings::subseq(temp_sequences[as.character(seqnames)],
+                                                                           start = start, end = end))
+                               ][, list(seq = paste(nt_seq, collapse = "")), by = group_name]
+revcompl_temp_sequences <- Biostrings::reverseComplement(temp_sequences)
+seq_dt_minus <- sub_exon_minus[, nt_seq := "emp"
+                               ][, nt_seq := as.character(Biostrings::subseq(revcompl_temp_sequences[as.character(seqnames)],
+                                                                             start = new_start,
+                                                                             end = new_end))
+                                 ][, list(seq = paste(nt_seq, collapse = "")), by = group_name]
+sequences <- Biostrings::DNAStringSet(c(seq_dt_plus$seq, seq_dt_minus$seq))
+names(sequences) <- c(unique(sub_exon_plus$group_name), unique(sub_exon_minus$group_name))
+
+Biostrings::width(sequences[tr_name ])

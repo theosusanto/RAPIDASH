@@ -1,0 +1,6 @@
+"0","# convert to gene names"
+"0","mart_path = './index/mart_homo-sapiens_geneID_transcriptID_transcriptID-v_gene-name.txt'"
+"0","mart = read.table(mart_path, sep='\t', header=TRUE)"
+"0","rownames(mart) = mart$Transcript.stable.ID"
+"0",""
+"0","mart[1:10,]"

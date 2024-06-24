@@ -1,0 +1,2 @@
+"0","# generate a table of all kept genes as ranked by p-value"
+"0","ranked_genes_rfp = topTable(e_rfp_fit, coef=1, number=sum(keep_cpm), sort.by='p')"

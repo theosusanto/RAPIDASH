@@ -1,0 +1,390 @@
+undefinedGO type	GO ID	GO term	Level	Occ. Ref.	Freq. Ref.	Occ. set	Freq. set	Ratio	E/D	Pval.	Pval. Bonferroni	Pval. BH	P(A|B)%	P(B|A)%
+biological_process  	 GO:0015810  	aspartate transmembrane transport  	7, 8, 9, 10	3 	0.000171  	1   	0.125  	726.74x  	E  	0.001369862  	0.532876318  	0.220085315040705  	 	 
+biological_process  	 GO:0070778  	L-aspartate transmembrane transport  	5, 8, 9, 10, 11	6 	0.000343  	1   	0.125  	363.37x  	E  	0.002736439  	1  	0.220085315040705  	 	 
+biological_process  	 GO:0019800  	peptide cross-linking via chondroitin 4-sulfate glycosaminoglycan  	5, 6, 7, 8, 9	6 	0.000343  	1   	0.125  	363.37x  	E  	0.002736439  	1  	0.220085315040705  	 	 
+biological_process  	 GO:0002480  	antigen processing and presentation of exogenous peptide antigen via MHC class I, TAP-independent  	6	7 	0.0004  	1   	0.125  	311.72x  	E  	0.003191235  	1  	0.220085315040705  	 	 
+biological_process  	 GO:0098712  	L-glutamate import across plasma membrane  	5, 6, 7, 8, 9, 10, 11, 12	10 	0.000571  	1   	0.125  	218.53x  	E  	0.004553437  	1  	0.220085315040705  	 	 
+biological_process  	 GO:0051938  	L-glutamate import  	5, 7, 8, 9, 10	11 	0.000628  	1   	0.125  	198.73x  	E  	0.005006777  	1  	0.220085315040705  	 	 
+biological_process  	 GO:0006068  	ethanol catabolic process  	5, 6, 7	12 	0.000685  	1   	0.125  	182.22x  	E  	0.005459753  	1  	0.220085315040705  	 	 
+biological_process  	 GO:0061042  	vascular wound healing  	5, 6, 7, 8, 9, 10, 11, 12	12 	0.000685  	1   	0.125  	182.22x  	E  	0.005459753  	1  	0.220085315040705  	 	 
+biological_process  	 GO:0015740  	C4-dicarboxylate transport  	8, 9	13 	0.000743  	1   	0.125  	168.01x  	E  	0.005912366  	1  	0.220085315040705  	 	 
+biological_process  	 GO:0034310  	primary alcohol catabolic process  	5, 6	15 	0.000857  	1   	0.125  	145.69x  	E  	0.006816502  	1  	0.220085315040705  	 	 
+biological_process  	 GO:0089718  	amino acid import across plasma membrane  	6, 7, 8, 9, 10	16 	0.000914  	1   	0.125  	136.61x  	E  	0.007268026  	1  	0.220085315040705  	 	 
+biological_process  	 GO:0051923  	sulfation  	4	16 	0.000914  	1   	0.125  	136.61x  	E  	0.007268026  	1  	0.220085315040705  	 	 
+biological_process  	 GO:0043090  	amino acid import  	6, 8, 9	19 	0.001085  	1   	0.125  	115.1x  	E  	0.008620421  	1  	0.220085315040705  	 	 
+biological_process  	 GO:0006067  	ethanol metabolic process  	5, 6	21 	0.0012  	1   	0.125  	104.08x  	E  	0.009520207  	1  	0.220085315040705  	 	 
+biological_process  	 GO:0015813  	L-glutamate transmembrane transport  	5, 6, 7, 8, 9, 10, 11	22 	0.001257  	1   	0.125  	99.36x  	E  	0.009969558  	1  	0.220085315040705  	 	 
+biological_process  	 GO:0060055  	angiogenesis involved in wound healing  	4, 5, 6, 7, 8, 9, 10, 11	23 	0.001314  	1   	0.125  	95.06x  	E  	0.01041855  	1  	0.220085315040705  	 	 
+biological_process  	 GO:0006790  	sulfur compound metabolic process  	3	360 	0.020564  	2   	0.25  	12.16x  	E  	0.01043161  	1  	0.220085315040705  	 	 
+biological_process  	 GO:0034035  	purine ribonucleoside bisphosphate metabolic process  	6, 7, 8, 9	25 	0.001428  	1   	0.125  	87.47x  	E  	0.01131544  	1  	0.220085315040705  	 	 
+biological_process  	 GO:0050427  	3"-phosphoadenosine 5"-phosphosulfate metabolic process  	4, 5, 7, 8, 9, 10	25 	0.001428  	1   	0.125  	87.47x  	E  	0.01131544  	1  	0.220085315040705  	 	 
+biological_process  	 GO:0007263  	nitric oxide mediated signal transduction  	5, 6, 7	25 	0.001428  	1   	0.125  	87.47x  	E  	0.01131544  	1  	0.220085315040705  	 	 
+biological_process  	 GO:0050690  	regulation of defense response to virus by virus  	5	29 	0.001657  	1   	0.125  	75.39x  	E  	0.0131049  	1  	0.236739710704651  	 	 
+biological_process  	 GO:0001504  	neurotransmitter uptake  	4, 5	30 	0.001714  	1   	0.125  	72.89x  	E  	0.01355136  	1  	0.236739710704651  	 	 
+biological_process  	 GO:2000352  	negative regulation of endothelial cell apoptotic process  	7, 8, 9	31 	0.001771  	1   	0.125  	70.54x  	E  	0.01399746  	1  	0.236739710704651  	 	 
+biological_process  	 GO:0016601  	Rac protein signal transduction  	6, 7, 8	33 	0.001885  	1   	0.125  	66.28x  	E  	0.01488859  	1  	0.241319235401163  	 	 
+biological_process  	 GO:0002931  	response to ischemia  	3	37 	0.002114  	1   	0.125  	59.1x  	E  	0.01666653  	1  	0.248007860051484  	 	 
+biological_process  	 GO:0030204  	chondroitin sulfate metabolic process  	4, 5, 7, 8	41 	0.002342  	1   	0.125  	53.35x  	E  	0.01843873  	1  	0.248007860051484  	 	 
+biological_process  	 GO:1904036  	negative regulation of epithelial cell apoptotic process  	6, 7, 8	42 	0.002399  	1   	0.125  	52.08x  	E  	0.01888089  	1  	0.248007860051484  	 	 
+biological_process  	 GO:0050654  	chondroitin sulfate proteoglycan metabolic process  	6, 7	43 	0.002456  	1   	0.125  	50.88x  	E  	0.01932268  	1  	0.248007860051484  	 	 
+biological_process  	 GO:1902475  	L-alpha-amino acid transmembrane transport  	7, 8, 9, 10	43 	0.002456  	1   	0.125  	50.88x  	E  	0.01932268  	1  	0.248007860051484  	 	 
+biological_process  	 GO:0017001  	antibiotic catabolic process  	4, 5	43 	0.002456  	1   	0.125  	50.88x  	E  	0.01932268  	1  	0.248007860051484  	 	 
+biological_process  	 GO:0014047  	glutamate secretion  	3, 6, 7, 8, 9, 10	44 	0.002513  	1   	0.125  	49.72x  	E  	0.01976412  	1  	0.248007860051484  	 	 
+biological_process  	 GO:0046164  	alcohol catabolic process  	4, 5	46 	0.002628  	1   	0.125  	47.55x  	E  	0.02064593  	1  	0.250977069665565  	 	 
+biological_process  	 GO:2000351  	regulation of endothelial cell apoptotic process  	7, 8	50 	0.002856  	1   	0.125  	43.75x  	E  	0.02240526  	1  	0.264110454629996  	 	 
+biological_process  	 GO:0072577  	endothelial cell apoptotic process  	6	56 	0.003199  	1   	0.125  	39.06x  	E  	0.02503356  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0018149  	peptide cross-linking  	6, 7	59 	0.00337  	1   	0.125  	37.08x  	E  	0.02634292  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0015800  	acidic amino acid transport  	6, 8, 9	61 	0.003485  	1   	0.125  	35.86x  	E  	0.02721405  	1  	0.266883825798408  	 	 
+biological_process  	 GO:1901616  	organic hydroxy compound catabolic process  	4	63 	0.003599  	1   	0.125  	34.72x  	E  	0.02808376  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0015807  	L-amino acid transport  	6, 8, 9	63 	0.003599  	1   	0.125  	34.72x  	E  	0.02808376  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0098739  	import across plasma membrane  	5	67 	0.003827  	1   	0.125  	32.65x  	E  	0.02981894  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0003333  	amino acid transmembrane transport  	6, 7, 8, 9	74 	0.004227  	1   	0.125  	29.56x  	E  	0.0328419  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0002479  	antigen processing and presentation of exogenous peptide antigen via MHC class I, TAP-dependent  	6	74 	0.004227  	1   	0.125  	29.56x  	E  	0.0328419  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0034308  	primary alcohol metabolic process  	4, 5	77 	0.004398  	1   	0.125  	28.42x  	E  	0.03413218  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0042590  	antigen processing and presentation of exogenous peptide antigen via MHC class I  	5	77 	0.004398  	1   	0.125  	28.42x  	E  	0.03413218  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0006855  	drug transmembrane transport  	5	77 	0.004398  	1   	0.125  	28.42x  	E  	0.03413218  	1  	0.266883825798408  	 	 
+biological_process  	 GO:1904035  	regulation of epithelial cell apoptotic process  	6, 7	81 	0.004627  	1   	0.125  	27.01x  	E  	0.03584763  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0006029  	proteoglycan metabolic process  	5, 6	84 	0.004798  	1   	0.125  	26.05x  	E  	0.03713053  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0060333  	interferon-gamma-mediated signaling pathway  	5, 6, 7	84 	0.004798  	1   	0.125  	26.05x  	E  	0.03713053  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0070125  	mitochondrial translational elongation  	6, 7, 8, 9	84 	0.004798  	1   	0.125  	26.05x  	E  	0.03713053  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0060337  	type I interferon signaling pathway  	5, 6, 7	85 	0.004855  	1   	0.125  	25.74x  	E  	0.03755746  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0071357  	cellular response to type I interferon  	5, 6	85 	0.004855  	1   	0.125  	25.74x  	E  	0.03755746  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0070126  	mitochondrial translational termination  	7, 8, 9	86 	0.004913  	1   	0.125  	25.44x  	E  	0.03798405  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0006835  	dicarboxylic acid transport  	7, 8	89 	0.005084  	1   	0.125  	24.58x  	E  	0.0392617  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0034340  	response to type I interferon  	4, 5	90 	0.005141  	1   	0.125  	24.31x  	E  	0.03968689  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0006911  	phagocytosis, engulfment  	6, 7	90 	0.005141  	1   	0.125  	24.31x  	E  	0.03968689  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0002474  	antigen processing and presentation of peptide antigen via MHC class I  	4	95 	0.005427  	1   	0.125  	23.03x  	E  	0.04180758  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0016032  	viral process  	4	777 	0.044385  	2   	0.25  	5.63x  	E  	0.04198272  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0048010  	vascular endothelial growth factor receptor signaling pathway  	6, 7, 8	97 	0.005541  	1   	0.125  	22.56x  	E  	0.04265342  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0001657  	ureteric bud development  	5, 6, 8, 9, 10, 11	97 	0.005541  	1   	0.125  	22.56x  	E  	0.04265342  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0072164  	mesonephric tubule development  	4, 5, 7, 8, 9, 10	98 	0.005598  	1   	0.125  	22.33x  	E  	0.04307582  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0072163  	mesonephric epithelium development  	6, 7, 8, 9	98 	0.005598  	1   	0.125  	22.33x  	E  	0.04307582  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0099024  	plasma membrane invagination  	5	98 	0.005598  	1   	0.125  	22.33x  	E  	0.04307582  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0006415  	translational termination  	6, 7, 8	100 	0.005712  	1   	0.125  	21.88x  	E  	0.04391958  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0001823  	mesonephros development  	5, 6, 7, 8	102 	0.005827  	1   	0.125  	21.45x  	E  	0.04476194  	1  	0.266883825798408  	 	 
+biological_process  	 GO:1904019  	epithelial cell apoptotic process  	5	103 	0.005884  	1   	0.125  	21.24x  	E  	0.04518261  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0098657  	import into cell  	4	819 	0.046784  	2   	0.25  	5.34x  	E  	0.04594875  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0010324  	membrane invagination  	4	106 	0.006055  	1   	0.125  	20.64x  	E  	0.04644251  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0010811  	positive regulation of cell-substrate adhesion  	3, 4, 5	108 	0.006169  	1   	0.125  	20.26x  	E  	0.04728072  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0044403  	symbiont process  	3	840 	0.047984  	2   	0.25  	5.21x  	E  	0.0479729  	1  	0.266883825798408  	 	 
+biological_process  	 GO:1903510  	mucopolysaccharide metabolic process  	6	113 	0.006455  	1   	0.125  	19.36x  	E  	0.04937019  	1  	0.266883825798408  	 	 
+biological_process  	 GO:1903825  	organic acid transmembrane transport  	5, 6	115 	0.006569  	1   	0.125  	19.03x  	E  	0.05020357  	1  	0.266883825798408  	 	 
+biological_process  	 GO:1905039  	carboxylic acid transmembrane transport  	6, 7, 8	115 	0.006569  	1   	0.125  	19.03x  	E  	0.05020357  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0042737  	drug catabolic process  	4	117 	0.006683  	1   	0.125  	18.7x  	E  	0.05103556  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0044419  	interspecies interaction between organisms  	2	881 	0.050326  	2   	0.25  	4.97x  	E  	0.05199888  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0046717  	acid secretion  	5	121 	0.006912  	1   	0.125  	18.08x  	E  	0.05269542  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0032543  	mitochondrial translation  	6, 7, 8	122 	0.006969  	1   	0.125  	17.93x  	E  	0.05310953  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0038096  	Fc-gamma receptor signaling pathway involved in phagocytosis  	4, 6, 7, 8, 9, 10	128 	0.007312  	1   	0.125  	17.09x  	E  	0.05558697  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0002433  	immune response-regulating cell surface receptor signaling pathway involved in phagocytosis  	3, 5, 6, 7	128 	0.007312  	1   	0.125  	17.09x  	E  	0.05558697  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0006414  	translational elongation  	5, 6, 7, 8	132 	0.00754  	1   	0.125  	16.58x  	E  	0.05723174  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0038094  	Fc-gamma receptor signaling pathway  	6, 7, 8	132 	0.00754  	1   	0.125  	16.58x  	E  	0.05723174  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0002431  	Fc receptor mediated stimulatory signaling pathway  	5, 6, 7, 8, 9	133 	0.007597  	1   	0.125  	16.45x  	E  	0.05764208  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0033875  	ribonucleoside bisphosphate metabolic process  	6, 7, 8	134 	0.007655  	1   	0.125  	16.33x  	E  	0.05805208  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0033865  	nucleoside bisphosphate metabolic process  	5, 6, 7	134 	0.007655  	1   	0.125  	16.33x  	E  	0.05805208  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0034032  	purine nucleoside bisphosphate metabolic process  	5, 6, 7, 8	134 	0.007655  	1   	0.125  	16.33x  	E  	0.05805208  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0016999  	antibiotic metabolic process  	4	136 	0.007769  	1   	0.125  	16.09x  	E  	0.05887106  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0006865  	amino acid transport  	5, 7, 8	137 	0.007826  	1   	0.125  	15.97x  	E  	0.05928003  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0043524  	negative regulation of neuron apoptotic process  	5, 6, 7, 8	138 	0.007883  	1   	0.125  	15.85x  	E  	0.05968867  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0072073  	kidney epithelium development  	5, 6, 7, 8	138 	0.007883  	1   	0.125  	15.85x  	E  	0.05968867  	1  	0.266883825798408  	 	 
+biological_process  	 GO:0001764  	neuron migration  	4, 5, 6, 7, 8	147 	0.008397  	1   	0.125  	14.88x  	E  	0.0633511  	1  	0.27866533164103  	 	 
+biological_process  	 GO:0140053  	mitochondrial gene expression  	5	148 	0.008454  	1   	0.125  	14.78x  	E  	0.06375634  	1  	0.27866533164103  	 	 
+biological_process  	 GO:0050776  	regulation of immune response  	3, 4	1022 	0.05838  	2   	0.25  	4.28x  	E  	0.06649889  	1  	0.287422984783248  	 	 
+biological_process  	 GO:0030203  	glycosaminoglycan metabolic process  	5	157 	0.008968  	1   	0.125  	13.94x  	E  	0.06738828  	1  	0.288066371169293  	 	 
+biological_process  	 GO:0006022  	aminoglycan metabolic process  	4	164 	0.009368  	1   	0.125  	13.34x  	E  	0.07019424  	1  	0.295440352623789  	 	 
+biological_process  	 GO:0035295  	tube development  	3, 4	1066 	0.060893  	2   	0.25  	4.11x  	E  	0.0711998  	1  	0.295440352623789  	 	 
+biological_process  	 GO:0071346  	cellular response to interferon-gamma  	5, 6	167 	0.00954  	1   	0.125  	13.1x  	E  	0.07139176  	1  	0.295440352623789  	 	 
+biological_process  	 GO:0002478  	antigen processing and presentation of exogenous peptide antigen  	4	170 	0.009711  	1   	0.125  	12.87x  	E  	0.07258625  	1  	0.297221610083883  	 	 
+biological_process  	 GO:0019884  	antigen processing and presentation of exogenous antigen  	3	177 	0.010111  	1   	0.125  	12.36x  	E  	0.07536171  	1  	0.305371927962203  	 	 
+biological_process  	 GO:0043436  	oxoacid metabolic process  	4	1132 	0.064664  	2   	0.25  	3.87x  	E  	0.07837855  	1  	0.308296351362306  	 	 
+biological_process  	 GO:0048002  	antigen processing and presentation of peptide antigen  	3	185 	0.010568  	1   	0.125  	11.83x  	E  	0.07851365  	1  	0.308296351362306  	 	 
+biological_process  	 GO:0034341  	response to interferon-gamma  	4, 5	187 	0.010682  	1   	0.125  	11.7x  	E  	0.07929831  	1  	0.308296351362306  	 	 
+biological_process  	 GO:1901215  	negative regulation of neuron death  	4, 5, 6	189 	0.010796  	1   	0.125  	11.58x  	E  	0.08008165  	1  	0.308296351362306  	 	 
+biological_process  	 GO:0006082  	organic acid metabolic process  	3	1148 	0.065578  	2   	0.25  	3.81x  	E  	0.08013931  	1  	0.308296351362306  	 	 
+biological_process  	 GO:0010810  	regulation of cell-substrate adhesion  	3, 4	192 	0.010968  	1   	0.125  	11.4x  	E  	0.08125416  	1  	0.308296351362306  	 	 
+biological_process  	 GO:0015893  	drug transport  	4	194 	0.011082  	1   	0.125  	11.28x  	E  	0.08203419  	1  	0.308296351362306  	 	 
+biological_process  	 GO:0043523  	regulation of neuron apoptotic process  	5, 6, 7	195 	0.011139  	1   	0.125  	11.22x  	E  	0.0824237  	1  	0.308296351362306  	 	 
+biological_process  	 GO:0071456  	cellular response to hypoxia  	4, 6	202 	0.011539  	1   	0.125  	10.83x  	E  	0.08514107  	1  	0.312451672908076  	 	 
+biological_process  	 GO:0043624  	cellular protein complex disassembly  	5	202 	0.011539  	1   	0.125  	10.83x  	E  	0.08514107  	1  	0.312451672908076  	 	 
+biological_process  	 GO:0002252  	immune effector process  	2	1204 	0.068776  	2   	0.25  	3.63x  	E  	0.08635653  	1  	0.313950361755237  	 	 
+biological_process  	 GO:0036294  	cellular response to decreased oxygen levels  	5	209 	0.011939  	1   	0.125  	10.47x  	E  	0.08784232  	1  	0.316395006235348  	 	 
+biological_process  	 GO:1901135  	carbohydrate derivative metabolic process  	3	1247 	0.071233  	2   	0.25  	3.51x  	E  	0.09118096  	1  	0.323941215652941  	 	 
+biological_process  	 GO:0051402  	neuron apoptotic process  	4, 5	219 	0.01251  	1   	0.125  	9.99x  	E  	0.09167338  	1  	0.323941215652941  	 	 
+biological_process  	 GO:0019882  	antigen processing and presentation  	2	221 	0.012624  	1   	0.125  	9.9x  	E  	0.09243567  	1  	0.323941215652941  	 	 
+biological_process  	 GO:0071453  	cellular response to oxygen levels  	4	225 	0.012853  	1   	0.125  	9.72x  	E  	0.09395634  	1  	0.326330517938453  	 	 
+biological_process  	 GO:0006836  	neurotransmitter transport  	4	239 	0.013652  	1   	0.125  	9.16x  	E  	0.09923782  	1  	0.341623986231068  	 	 
+biological_process  	 GO:0038093  	Fc receptor signaling pathway  	5, 6, 7	243 	0.013881  	1   	0.125  	9x  	E  	0.1007352  	1  	0.343736672883235  	 	 
+biological_process  	 GO:0098656  	anion transmembrane transport  	6	251 	0.014338  	1   	0.125  	8.72x  	E  	0.1037144  	1  	0.350287899308053  	 	 
+biological_process  	 GO:0010976  	positive regulation of neuron projection development  	5, 6, 7, 8, 9, 10, 11, 12	253 	0.014452  	1   	0.125  	8.65x  	E  	0.104456  	1  	0.350287899308053  	 	 
+biological_process  	 GO:0001822  	kidney development  	4, 5, 6, 7	263 	0.015023  	1   	0.125  	8.32x  	E  	0.1081449  	1  	0.35955855317536  	 	 
+biological_process  	 GO:0032940  	secretion by cell  	2, 5	1435 	0.081972  	2   	0.25  	3.05x  	E  	0.1126187  	1  	0.368140053281877  	 	 
+biological_process  	 GO:0016477  	cell migration  	3, 4	1435 	0.081972  	2   	0.25  	3.05x  	E  	0.1126187  	1  	0.368140053281877  	 	 
+biological_process  	 GO:0072001  	renal system development  	4, 5, 6	281 	0.016052  	1   	0.125  	7.79x  	E  	0.1147046  	1  	0.37183397993696  	 	 
+biological_process  	 GO:1901214  	regulation of neuron death  	4, 5	284 	0.016223  	1   	0.125  	7.7x  	E  	0.1157879  	1  	0.372243702255775  	 	 
+biological_process  	 GO:0001505  	regulation of neurotransmitter levels  	3	303 	0.017308  	1   	0.125  	7.22x  	E  	0.1225832  	1  	0.377530868004363  	 	 
+biological_process  	 GO:0032984  	protein-containing complex disassembly  	4	307 	0.017537  	1   	0.125  	7.13x  	E  	0.1239994  	1  	0.377530868004363  	 	 
+biological_process  	 GO:0002682  	regulation of immune system process  	2, 3	1541 	0.088027  	2   	0.25  	2.84x  	E  	0.1248206  	1  	0.377530868004363  	 	 
+biological_process  	 GO:0018209  	peptidyl-serine modification  	7, 8	312 	0.017822  	1   	0.125  	7.01x  	E  	0.1257627  	1  	0.377530868004363  	 	 
+biological_process  	 GO:0015849  	organic acid transport  	5	314 	0.017937  	1   	0.125  	6.97x  	E  	0.1264658  	1  	0.377530868004363  	 	 
+biological_process  	 GO:0046942  	carboxylic acid transport  	6, 7	314 	0.017937  	1   	0.125  	6.97x  	E  	0.1264658  	1  	0.377530868004363  	 	 
+biological_process  	 GO:0001655  	urogenital system development  	4, 5	317 	0.018108  	1   	0.125  	6.9x  	E  	0.1275182  	1  	0.377530868004363  	 	 
+biological_process  	 GO:0046903  	secretion  	4	1567 	0.089512  	2   	0.25  	2.79x  	E  	0.1278132  	1  	0.377530868004363  	 	 
+biological_process  	 GO:0070997  	neuron death  	3	318 	0.018165  	1   	0.125  	6.88x  	E  	0.1278684  	1  	0.377530868004363  	 	 
+biological_process  	 GO:0031589  	cell-substrate adhesion  	3	320 	0.018279  	1   	0.125  	6.84x  	E  	0.1285678  	1  	0.377530868004363  	 	 
+biological_process  	 GO:0048870  	cell motility  	2, 3	1578 	0.090141  	2   	0.25  	2.77x  	E  	0.1290787  	1  	0.377530868004363  	 	 
+biological_process  	 GO:0051674  	localization of cell  	2	1578 	0.090141  	2   	0.25  	2.77x  	E  	0.1290787  	1  	0.377530868004363  	 	 
+biological_process  	 GO:0006909  	phagocytosis  	6	326 	0.018622  	1   	0.125  	6.71x  	E  	0.1306586  	1  	0.379300065904089  	 	 
+biological_process  	 GO:0019932  	second-messenger-mediated signaling  	4, 5, 6	330 	0.018851  	1   	0.125  	6.63x  	E  	0.1320464  	1  	0.37967080207037  	 	 
+biological_process  	 GO:0006066  	alcohol metabolic process  	3, 4	332 	0.018965  	1   	0.125  	6.59x  	E  	0.1327384  	1  	0.37967080207037  	 	 
+biological_process  	 GO:0030198  	extracellular matrix organization  	4	336 	0.019193  	1   	0.125  	6.51x  	E  	0.1341187  	1  	0.380418415157188  	 	 
+biological_process  	 GO:0045666  	positive regulation of neuron differentiation  	5, 6, 7, 8, 9, 10	339 	0.019365  	1   	0.125  	6.45x  	E  	0.1351508  	1  	0.380418415157188  	 	 
+biological_process  	 GO:0031346  	positive regulation of cell projection organization  	4, 5, 6	344 	0.01965  	1   	0.125  	6.36x  	E  	0.1368647  	1  	0.380418415157188  	 	 
+biological_process  	 GO:0001666  	response to hypoxia  	3, 5	346 	0.019765  	1   	0.125  	6.32x  	E  	0.1375482  	1  	0.380418415157188  	 	 
+biological_process  	 GO:0007265  	Ras protein signal transduction  	5, 6, 7	347 	0.019822  	1   	0.125  	6.31x  	E  	0.1378895  	1  	0.380418415157188  	 	 
+biological_process  	 GO:0036293  	response to decreased oxygen levels  	4	354 	0.020222  	1   	0.125  	6.18x  	E  	0.1402698  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0070482  	response to oxygen levels  	3	376 	0.021478  	1   	0.125  	5.82x  	E  	0.1476543  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0045785  	positive regulation of cell adhesion  	2, 3, 4	381 	0.021764  	1   	0.125  	5.74x  	E  	0.1493123  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0043062  	extracellular structure organization  	3	389 	0.022221  	1   	0.125  	5.63x  	E  	0.1519496  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0040011  	locomotion  	1	1814 	0.103622  	2   	0.25  	2.41x  	E  	0.1559722  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0009100  	glycoprotein metabolic process  	4, 5	403 	0.023021  	1   	0.125  	5.43x  	E  	0.156519  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0042391  	regulation of membrane potential  	3	411 	0.023478  	1   	0.125  	5.32x  	E  	0.1591041  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0044282  	small molecule catabolic process  	3	416 	0.023763  	1   	0.125  	5.26x  	E  	0.1607102  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0050769  	positive regulation of neurogenesis  	4, 5, 6, 7, 8, 9	427 	0.024392  	1   	0.125  	5.12x  	E  	0.1642178  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0002429  	immune response-activating cell surface receptor signaling pathway  	4, 5, 6, 7, 8	431 	0.02462  	1   	0.125  	5.08x  	E  	0.1654845  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0010975  	regulation of neuron projection development  	6, 7, 8, 9, 10, 11	435 	0.024849  	1   	0.125  	5.03x  	E  	0.1667466  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0006915  	apoptotic process  	4	1921 	0.109734  	2   	0.25  	2.28x  	E  	0.1678838  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0002768  	immune response-regulating cell surface receptor signaling pathway  	4, 5, 6	461 	0.026334  	1   	0.125  	4.75x  	E  	0.1748373  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0016192  	vesicle-mediated transport  	4	1988 	0.113561  	2   	0.25  	2.2x  	E  	0.175213  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0015711  	organic anion transport  	5, 6	465 	0.026562  	1   	0.125  	4.71x  	E  	0.1760648  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0043312  	neutrophil degranulation  	4, 6, 7, 8, 9	480 	0.027419  	1   	0.125  	4.56x  	E  	0.1806272  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0006928  	movement of cell or subcellular component  	2	2042 	0.116646  	2   	0.25  	2.14x  	E  	0.1810364  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0002283  	neutrophil activation involved in immune response  	5, 6, 7	483 	0.027591  	1   	0.125  	4.53x  	E  	0.1815321  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0012501  	programmed cell death  	3	2052 	0.117217  	2   	0.25  	2.13x  	E  	0.182106  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0007264  	small GTPase mediated signal transduction  	4, 5, 6	488 	0.027876  	1   	0.125  	4.48x  	E  	0.1830344  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0051962  	positive regulation of nervous system development  	3, 4, 5, 6, 7	490 	0.02799  	1   	0.125  	4.47x  	E  	0.1836334  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0044281  	small molecule metabolic process  	2	2072 	0.118359  	2   	0.25  	2.11x  	E  	0.1842367  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0042119  	neutrophil activation  	5, 6	493 	0.028162  	1   	0.125  	4.44x  	E  	0.1845298  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0002446  	neutrophil mediated immunity  	5	495 	0.028276  	1   	0.125  	4.42x  	E  	0.1851259  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0032501  	multicellular organismal process  	1	7382 	0.421684  	2   	0.25  	1.69x  	D  	0.1862584  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0036230  	granulocyte activation  	4, 5	499 	0.028505  	1   	0.125  	4.39x  	E  	0.1863149  	1  	0.382268520556722  	 	 
+biological_process  	 GO:1901615  	organic hydroxy compound metabolic process  	3	499 	0.028505  	1   	0.125  	4.39x  	E  	0.1863149  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0010720  	positive regulation of cell development  	4, 5, 6	502 	0.028676  	1   	0.125  	4.36x  	E  	0.1872036  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0006955  	immune response  	2	2151 	0.122872  	2   	0.25  	2.03x  	E  	0.1925355  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0009150  	purine ribonucleotide metabolic process  	6, 7, 8, 9	523 	0.029875  	1   	0.125  	4.18x  	E  	0.1933547  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0043299  	leukocyte degranulation  	3, 5, 7, 8	527 	0.030104  	1   	0.125  	4.15x  	E  	0.1945125  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0008219  	cell death  	2	2179 	0.124472  	2   	0.25  	2.01x  	E  	0.1954296  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0002275  	myeloid cell activation involved in immune response  	4, 5	534 	0.030504  	1   	0.125  	4.1x  	E  	0.1965279  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0009259  	ribonucleotide metabolic process  	5, 6, 7, 8	538 	0.030732  	1   	0.125  	4.07x  	E  	0.1976736  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0002444  	myeloid leukocyte mediated immunity  	4	539 	0.030789  	1   	0.125  	4.06x  	E  	0.1979593  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0006357  	regulation of transcription by RNA polymerase II  	6, 7, 8, 9, 10, 11	2208 	0.126128  	2   	0.25  	1.98x  	E  	0.1983996  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0006163  	purine nucleotide metabolic process  	5, 6, 7, 8	551 	0.031475  	1   	0.125  	3.97x  	E  	0.2013666  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0051179  	localization  	1	6387 	0.364846  	4   	0.5  	1.37x  	E  	0.2018857  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0019693  	ribose phosphate metabolic process  	4, 5	553 	0.031589  	1   	0.125  	3.96x  	E  	0.2019307  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0042060  	wound healing  	4	557 	0.031818  	1   	0.125  	3.93x  	E  	0.2030556  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0022411  	cellular component disassembly  	3	558 	0.031875  	1   	0.125  	3.92x  	E  	0.2033361  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0007399  	nervous system development  	4, 5	2268 	0.129556  	2   	0.25  	1.93x  	E  	0.2044524  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0001525  	angiogenesis  	3, 4, 5, 6, 7, 8, 9, 10	564 	0.032218  	1   	0.125  	3.88x  	E  	0.2050137  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0002757  	immune response-activating signal transduction  	3, 4, 5, 6, 7	581 	0.033189  	1   	0.125  	3.77x  	E  	0.2097139  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0120035  	regulation of plasma membrane bounded cell projection organization  	5, 6	586 	0.033474  	1   	0.125  	3.73x  	E  	0.2110816  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0072521  	purine-containing compound metabolic process  	4	586 	0.033474  	1   	0.125  	3.73x  	E  	0.2110816  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0045664  	regulation of neuron differentiation  	5, 6, 7, 8, 9	588 	0.033588  	1   	0.125  	3.72x  	E  	0.2116268  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0023052  	signaling  	1	6577 	0.3757  	4   	0.5  	1.33x  	E  	0.2118828  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0007154  	cell communication  	2	6599 	0.376956  	4   	0.5  	1.33x  	E  	0.2130087  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0048522  	positive regulation of cellular process  	2, 3, 4	5041 	0.287958  	1   	0.125  	2.3x  	D  	0.2137569  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0031344  	regulation of cell projection organization  	4, 5	596 	0.034045  	1   	0.125  	3.67x  	E  	0.2137969  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0006820  	anion transport  	5	598 	0.03416  	1   	0.125  	3.66x  	E  	0.2143368  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0030036  	actin cytoskeleton organization  	3, 5	608 	0.034731  	1   	0.125  	3.6x  	E  	0.2170202  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0006366  	transcription by RNA polymerase II  	6, 7, 8, 9, 10	2399 	0.137039  	2   	0.25  	1.82x  	E  	0.2172075  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0034641  	cellular nitrogen compound metabolic process  	3	6690 	0.382155  	4   	0.5  	1.31x  	E  	0.2175896  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0002764  	immune response-regulating signaling pathway  	3, 4, 5	611 	0.034902  	1   	0.125  	3.58x  	E  	0.2178201  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0098916  	anterograde trans-synaptic signaling  	5, 6	612 	0.034959  	1   	0.125  	3.58x  	E  	0.2180862  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0007268  	chemical synaptic transmission  	6, 7	612 	0.034959  	1   	0.125  	3.58x  	E  	0.2180862  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0099536  	synaptic signaling  	3, 4	614 	0.035074  	1   	0.125  	3.56x  	E  	0.2186177  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0099537  	trans-synaptic signaling  	4, 5	614 	0.035074  	1   	0.125  	3.56x  	E  	0.2186177  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0042221  	response to chemical  	2	4558 	0.260368  	3   	0.375  	1.44x  	E  	0.2188278  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0002274  	myeloid leukocyte activation  	3, 4	620 	0.035416  	1   	0.125  	3.53x  	E  	0.2202056  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0019222  	regulation of metabolic process  	2, 3	6789 	0.38781  	2   	0.25  	1.55x  	D  	0.2216851  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0030155  	regulation of cell adhesion  	2, 3	633 	0.036159  	1   	0.125  	3.46x  	E  	0.2236138  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0051704  	multi-organism process  	1	2469 	0.141037  	2   	0.25  	1.77x  	E  	0.2237472  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0048514  	blood vessel morphogenesis  	4, 5, 6, 7, 8, 9	653 	0.037301  	1   	0.125  	3.35x  	E  	0.2287714  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0002253  	activation of immune response  	2, 4, 5, 6	655 	0.037416  	1   	0.125  	3.34x  	E  	0.2292815  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0009611  	response to wounding  	3	668 	0.038158  	1   	0.125  	3.28x  	E  	0.2325721  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0006412  	translation  	5, 6, 7	673 	0.038444  	1   	0.125  	3.25x  	E  	0.2338262  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0002366  	leukocyte activation involved in immune response  	3, 4	679 	0.038787  	1   	0.125  	3.22x  	E  	0.2353227  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0002263  	cell activation involved in immune response  	3	683 	0.039015  	1   	0.125  	3.2x  	E  	0.2363154  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0009117  	nucleotide metabolic process  	5, 6, 7	689 	0.039358  	1   	0.125  	3.18x  	E  	0.2377967  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0006753  	nucleoside phosphate metabolic process  	4, 5, 6	695 	0.039701  	1   	0.125  	3.15x  	E  	0.239269  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0043043  	peptide biosynthetic process  	5, 6	698 	0.039872  	1   	0.125  	3.13x  	E  	0.2400017  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0006810  	transport  	3	4971 	0.28396  	3   	0.375  	1.32x  	E  	0.2413969  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0030029  	actin filament-based process  	2	706 	0.040329  	1   	0.125  	3.1x  	E  	0.2419447  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0007169  	transmembrane receptor protein tyrosine kinase signaling pathway  	5, 6, 7	708 	0.040443  	1   	0.125  	3.09x  	E  	0.2424279  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0050767  	regulation of neurogenesis  	5, 6, 7, 8	723 	0.0413  	1   	0.125  	3.03x  	E  	0.2460205  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0051234  	establishment of localization  	2	5079 	0.290129  	3   	0.375  	1.29x  	E  	0.2465741  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0060255  	regulation of macromolecule metabolic process  	3, 4	6341 	0.362219  	2   	0.25  	1.45x  	D  	0.247271  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0035556  	intracellular signal transduction  	3, 4, 5	2750 	0.157089  	2   	0.25  	1.59x  	E  	0.2478764  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0001568  	blood vessel development  	3, 5, 6, 7, 8	733 	0.041871  	1   	0.125  	2.99x  	E  	0.2483846  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0045055  	regulated exocytosis  	4, 6, 7	736 	0.042043  	1   	0.125  	2.97x  	E  	0.2490891  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0044271  	cellular nitrogen compound biosynthetic process  	4	5174 	0.295556  	3   	0.375  	1.27x  	E  	0.2508593  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0006897  	endocytosis  	5	744 	0.0425  	1   	0.125  	2.94x  	E  	0.2509568  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0034645  	cellular macromolecule biosynthetic process  	4, 5	5199 	0.296984  	3   	0.375  	1.26x  	E  	0.2519441  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0001944  	vasculature development  	4, 5, 6, 7	758 	0.043299  	1   	0.125  	2.89x  	E  	0.2541877  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0031323  	regulation of cellular metabolic process  	3, 4	6201 	0.354221  	2   	0.25  	1.42x  	D  	0.2548343  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0072358  	cardiovascular system development  	4, 5, 6	766 	0.043756  	1   	0.125  	2.86x  	E  	0.2560126  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0032502  	developmental process  	1	6167 	0.352279  	2   	0.25  	1.41x  	D  	0.2566308  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0009059  	macromolecule biosynthetic process  	4	5323 	0.304067  	3   	0.375  	1.23x  	E  	0.2570554  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0080090  	regulation of primary metabolic process  	3, 4	6137 	0.350566  	2   	0.25  	1.4x  	D  	0.2582019  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0055086  	nucleobase-containing small molecule metabolic process  	3, 4, 5	780 	0.044556  	1   	0.125  	2.81x  	E  	0.2591691  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0017144  	drug metabolic process  	3	780 	0.044556  	1   	0.125  	2.81x  	E  	0.2591691  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0019221  	cytokine-mediated signaling pathway  	4, 5, 6	789 	0.04507  	1   	0.125  	2.77x  	E  	0.2611735  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0043170  	macromolecule metabolic process  	3	9611 	0.549012  	4   	0.5  	1.1x  	D  	0.2631352  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0000122  	negative regulation of transcription by RNA polymerase II  	6, 7, 8, 9, 10, 11, 12	799 	0.045641  	1   	0.125  	2.74x  	E  	0.263378  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0050778  	positive regulation of immune response  	3, 4, 5	800 	0.045699  	1   	0.125  	2.74x  	E  	0.2635971  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0007166  	cell surface receptor signaling pathway  	3, 4, 5	2972 	0.16977  	2   	0.25  	1.47x  	E  	0.2643452  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0051171  	regulation of nitrogen compound metabolic process  	3, 4	5992 	0.342283  	2   	0.25  	1.37x  	D  	0.265595  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0051960  	regulation of nervous system development  	4, 5, 6	810 	0.04627  	1   	0.125  	2.7x  	E  	0.2657756  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0043412  	macromolecule modification  	4	4378 	0.250086  	1   	0.125  	2x  	D  	0.2668457  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0002376  	immune system process  	1	3022 	0.172627  	2   	0.25  	1.45x  	E  	0.2677219  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0019538  	protein metabolic process  	3, 4	5926 	0.338513  	2   	0.25  	1.35x  	D  	0.2688414  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0043604  	amide biosynthetic process  	5	828 	0.047298  	1   	0.125  	2.64x  	E  	0.2696377  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0010467  	gene expression  	4	5714 	0.326402  	3   	0.375  	1.15x  	E  	0.2701152  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0002443  	leukocyte mediated immunity  	3	833 	0.047584  	1   	0.125  	2.63x  	E  	0.270697  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0051716  	cellular response to stimulus  	2	7385 	0.421855  	3   	0.375  	1.12x  	D  	0.2716129  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0044260  	cellular macromolecule metabolic process  	3, 4	8407 	0.480235  	4   	0.5  	1.04x  	E  	0.271794  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0008152  	metabolic process  	1	11709 	0.668856  	5   	0.625  	1.07x  	D  	0.2722705  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0050896  	response to stimulus  	1	8973 	0.512567  	4   	0.5  	1.03x  	D  	0.2728093  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0006518  	peptide metabolic process  	4, 5	845 	0.048269  	1   	0.125  	2.59x  	E  	0.2732159  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0006887  	exocytosis  	3, 5, 6	849 	0.048498  	1   	0.125  	2.58x  	E  	0.2740482  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0060284  	regulation of cell development  	4, 5	849 	0.048498  	1   	0.125  	2.58x  	E  	0.2740482  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0070887  	cellular response to chemical stimulus  	3	3125 	0.17851  	2   	0.25  	1.4x  	E  	0.2742836  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0006807  	nitrogen compound metabolic process  	2	10275 	0.586942  	5   	0.625  	1.06x  	E  	0.2749721  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0050789  	regulation of biological process  	1, 2	11542 	0.659317  	5   	0.625  	1.05x  	D  	0.2759376  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0006139  	nucleobase-containing compound metabolic process  	3, 4	5983 	0.341769  	3   	0.375  	1.1x  	E  	0.2762978  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0048856  	anatomical structure development  	2	5745 	0.328173  	2   	0.25  	1.31x  	D  	0.277315  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0007165  	signal transduction  	2, 3, 4	6074 	0.346967  	3   	0.375  	1.08x  	E  	0.2778615  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0048518  	positive regulation of biological process  	1, 2, 3	5732 	0.327431  	2   	0.25  	1.31x  	D  	0.2778976  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0016043  	cellular component organization  	2	6108 	0.348909  	3   	0.375  	1.07x  	E  	0.278377  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0046483  	heterocycle metabolic process  	3	6145 	0.351023  	3   	0.375  	1.07x  	E  	0.2788955  	1  	0.382268520556722  	 	 
+biological_process  	 GO:1901564  	organonitrogen compound metabolic process  	3	6975 	0.398435  	3   	0.375  	1.06x  	D  	0.2791058  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0043066  	negative regulation of apoptotic process  	5, 6, 7	874 	0.049926  	1   	0.125  	2.5x  	E  	0.2791667  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0006725  	cellular aromatic compound metabolic process  	3	6184 	0.35325  	3   	0.375  	1.06x  	E  	0.2793941  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0071704  	organic substance metabolic process  	2	11190 	0.639209  	5   	0.625  	1.02x  	D  	0.2807176  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0071840  	cellular component organization or biogenesis  	1	6324 	0.361248  	3   	0.375  	1.04x  	E  	0.2807798  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0044249  	cellular biosynthetic process  	3	6336 	0.361933  	3   	0.375  	1.04x  	E  	0.2808693  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0044238  	primary metabolic process  	2	10743 	0.613675  	5   	0.625  	1.02x  	E  	0.2810842  	1  	0.382268520556722  	 	 
+biological_process  	 GO:1901360  	organic cyclic compound metabolic process  	3	6385 	0.364732  	3   	0.375  	1.03x  	E  	0.2811866  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0044237  	cellular metabolic process  	2	10764 	0.614875  	5   	0.625  	1.02x  	E  	0.2812064  	1  	0.382268520556722  	 	 
+biological_process  	 GO:1901576  	organic substance biosynthetic process  	3	6423 	0.366903  	3   	0.375  	1.02x  	E  	0.2813799  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0050794  	regulation of cellular process  	2, 3	10848 	0.619673  	5   	0.625  	1.01x  	E  	0.28156  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0009058  	biosynthetic process  	2	6497 	0.37113  	3   	0.375  	1.01x  	E  	0.2816244  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0043069  	negative regulation of programmed cell death  	4, 5, 6	889 	0.050783  	1   	0.125  	2.46x  	E  	0.2821698  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0035239  	tube morphogenesis  	3, 4, 5	889 	0.050783  	1   	0.125  	2.46x  	E  	0.2821698  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0006464  	cellular protein modification process  	5, 6	4188 	0.239232  	1   	0.125  	1.91x  	D  	0.2822826  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0036211  	protein modification process  	4, 5	4188 	0.239232  	1   	0.125  	1.91x  	D  	0.2822826  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0061024  	membrane organization  	3	910 	0.051982  	1   	0.125  	2.4x  	E  	0.2862893  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0031175  	neuron projection development  	5, 6, 8, 9, 10	919 	0.052496  	1   	0.125  	2.38x  	E  	0.2880248  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0045597  	positive regulation of cell differentiation  	3, 4, 5	922 	0.052668  	1   	0.125  	2.37x  	E  	0.2885993  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0045087  	innate immune response  	3, 4	943 	0.053867  	1   	0.125  	2.32x  	E  	0.2925656  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0065007  	biological regulation  	1	12178 	0.695647  	6   	0.75  	1.08x  	E  	0.2939849  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0090304  	nucleic acid metabolic process  	4, 5	5323 	0.304067  	2   	0.25  	1.22x  	D  	0.2941571  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0042493  	response to drug  	3	955 	0.054553  	1   	0.125  	2.29x  	E  	0.294789  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0007275  	multicellular organism development  	2, 3	5282 	0.301725  	2   	0.25  	1.21x  	D  	0.2955418  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0044267  	cellular protein metabolic process  	4, 5	5245 	0.299612  	2   	0.25  	1.2x  	D  	0.2967492  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0060548  	negative regulation of cell death  	3, 4, 5	969 	0.055352  	1   	0.125  	2.26x  	E  	0.2973436  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0048519  	negative regulation of biological process  	1, 2, 3	5197 	0.29687  	2   	0.25  	1.19x  	D  	0.2982542  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0006355  	regulation of transcription, DNA-templated  	5, 6, 7, 8, 9, 10	3735 	0.213355  	2   	0.25  	1.17x  	E  	0.302094  	1  	0.382268520556722  	 	 
+biological_process  	 GO:1903506  	regulation of nucleic acid-templated transcription  	6, 7, 8, 9	3756 	0.214555  	2   	0.25  	1.17x  	E  	0.3027159  	1  	0.382268520556722  	 	 
+biological_process  	 GO:2001141  	regulation of RNA biosynthetic process  	5, 6, 7, 8	3764 	0.215012  	2   	0.25  	1.16x  	E  	0.3029471  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0006950  	response to stress  	2	3877 	0.221467  	2   	0.25  	1.13x  	E  	0.3058742  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0006351  	transcription, DNA-templated  	5, 6, 7, 8, 9	3915 	0.223638  	2   	0.25  	1.12x  	E  	0.3067178  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0007167  	enzyme linked receptor protein signaling pathway  	4, 5, 6	1024 	0.058494  	1   	0.125  	2.14x  	E  	0.3069766  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0097659  	nucleic acid-templated transcription  	6, 7, 8	3930 	0.224494  	2   	0.25  	1.11x  	E  	0.3070316  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0032774  	RNA biosynthetic process  	5, 6, 7	3946 	0.225408  	2   	0.25  	1.11x  	E  	0.3073542  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0010468  	regulation of gene expression  	4, 5	4826 	0.275677  	2   	0.25  	1.1x  	D  	0.3073574  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0051252  	regulation of RNA metabolic process  	4, 5, 6, 7	3961 	0.226265  	2   	0.25  	1.1x  	E  	0.3076454  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0016070  	RNA metabolic process  	5, 6	4806 	0.274534  	2   	0.25  	1.1x  	D  	0.3077116  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0048731  	system development  	3, 4	4727 	0.270022  	2   	0.25  	1.08x  	D  	0.3089641  	1  	0.382268520556722  	 	 
+biological_process  	 GO:1901362  	organic cyclic compound biosynthetic process  	4	4702 	0.268594  	2   	0.25  	1.07x  	D  	0.309311  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0030154  	cell differentiation  	3	4068 	0.232377  	2   	0.25  	1.08x  	E  	0.3094108  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0048583  	regulation of response to stimulus  	2, 3	4138 	0.236376  	2   	0.25  	1.06x  	E  	0.3102735  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0048523  	negative regulation of cellular process  	2, 3, 4	4599 	0.26271  	2   	0.25  	1.05x  	D  	0.3104823  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0048666  	neuron development  	4, 5, 7, 8, 9	1045 	0.059694  	1   	0.125  	2.09x  	E  	0.3104881  	1  	0.382268520556722  	 	 
+biological_process  	 GO:2000112  	regulation of cellular macromolecule biosynthetic process  	5, 6	4167 	0.238033  	2   	0.25  	1.05x  	E  	0.3105642  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0019438  	aromatic compound biosynthetic process  	4	4565 	0.260768  	2   	0.25  	1.04x  	D  	0.3107759  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0018130  	heterocycle biosynthetic process  	4	4559 	0.260425  	2   	0.25  	1.04x  	D  	0.3108229  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0019219  	regulation of nucleobase-containing compound metabolic process  	4, 5	4239 	0.242146  	2   	0.25  	1.03x  	E  	0.3111193  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0048869  	cellular developmental process  	2	4243 	0.242374  	2   	0.25  	1.03x  	E  	0.3111433  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0034654  	nucleobase-containing compound biosynthetic process  	4, 5	4495 	0.256769  	2   	0.25  	1.03x  	D  	0.3112314  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0010556  	regulation of macromolecule biosynthetic process  	4, 5	4260 	0.243345  	2   	0.25  	1.03x  	E  	0.311237  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0009889  	regulation of biosynthetic process  	3, 4	4477 	0.255741  	2   	0.25  	1.02x  	D  	0.3113157  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0031326  	regulation of cellular biosynthetic process  	4, 5	4406 	0.251685  	2   	0.25  	1.01x  	D  	0.3115144  	1  	0.382268520556722  	 	 
+biological_process  	 GO:0071345  	cellular response to cytokine stimulus  	5	1072 	0.061236  	1   	0.125  	2.04x  	E  	0.3148706  	1  	0.385051510438869  	 	 
+biological_process  	 GO:0002684  	positive regulation of immune system process  	2, 3, 4	1085 	0.061979  	1   	0.125  	2.02x  	E  	0.3169281  	1  	0.385051510438869  	 	 
+biological_process  	 GO:0006996  	organelle organization  	3	3734 	0.213298  	1   	0.125  	1.71x  	D  	0.3182588  	1  	0.385051510438869  	 	 
+biological_process  	 GO:0072359  	circulatory system development  	4, 5	1094 	0.062493  	1   	0.125  	2x  	E  	0.3183328  	1  	0.385051510438869  	 	 
+biological_process  	 GO:0034220  	ion transmembrane transport  	5	1103 	0.063007  	1   	0.125  	1.98x  	E  	0.3197214  	1  	0.385051510438869  	 	 
+biological_process  	 GO:0043603  	cellular amide metabolic process  	4	1103 	0.063007  	1   	0.125  	1.98x  	E  	0.3197214  	1  	0.385051510438869  	 	 
+biological_process  	 GO:0065008  	regulation of biological quality  	2	3663 	0.209243  	1   	0.125  	1.67x  	D  	0.3236524  	1  	0.387730799408194  	 	 
+biological_process  	 GO:0048646  	anatomical structure formation involved in morphogenesis  	2, 3, 4	1131 	0.064606  	1   	0.125  	1.93x  	E  	0.3239396  	1  	0.387730799408194  	 	 
+biological_process  	 GO:0034097  	response to cytokine  	4	1156 	0.066035  	1   	0.125  	1.89x  	E  	0.3275771  	1  	0.390881914826392  	 	 
+biological_process  	 GO:0045892  	negative regulation of transcription, DNA-templated  	5, 6, 7, 8, 9, 10, 11	1172 	0.066948  	1   	0.125  	1.87x  	E  	0.3298423  	1  	0.391735769188505  	 	 
+biological_process  	 GO:0009628  	response to abiotic stimulus  	2	1184 	0.067634  	1   	0.125  	1.85x  	E  	0.3315094  	1  	0.391735769188505  	 	 
+biological_process  	 GO:0019637  	organophosphate metabolic process  	3, 4	1185 	0.067691  	1   	0.125  	1.85x  	E  	0.3316471  	1  	0.391735769188505  	 	 
+biological_process  	 GO:0051130  	positive regulation of cellular component organization  	3, 4, 5	1203 	0.068719  	1   	0.125  	1.82x  	E  	0.3340936  	1  	0.391735769188505  	 	 
+biological_process  	 GO:0045321  	leukocyte activation  	2, 3	1214 	0.069348  	1   	0.125  	1.8x  	E  	0.335559  	1  	0.391735769188505  	 	 
+biological_process  	 GO:1903507  	negative regulation of nucleic acid-templated transcription  	6, 7, 8, 9, 10	1215 	0.069405  	1   	0.125  	1.8x  	E  	0.3356912  	1  	0.391735769188505  	 	 
+biological_process  	 GO:1902679  	negative regulation of RNA biosynthetic process  	5, 6, 7, 8, 9	1217 	0.069519  	1   	0.125  	1.8x  	E  	0.3359548  	1  	0.391735769188505  	 	 
+biological_process  	 GO:0007010  	cytoskeleton organization  	4	1220 	0.06969  	1   	0.125  	1.79x  	E  	0.336349  	1  	0.391735769188505  	 	 
+biological_process  	 GO:0018193  	peptidyl-amino acid modification  	6, 7	1253 	0.071575  	1   	0.125  	1.75x  	E  	0.3405759  	1  	0.394276264476206  	 	 
+biological_process  	 GO:0048513  	animal organ development  	3, 4, 5	3428 	0.195819  	1   	0.125  	1.57x  	D  	0.3407759  	1  	0.394276264476206  	 	 
+biological_process  	 GO:0060429  	epithelium development  	4	1261 	0.072032  	1   	0.125  	1.74x  	E  	0.341571  	1  	0.394276264476206  	 	 
+biological_process  	 GO:0030182  	neuron differentiation  	4, 6, 7, 8	1293 	0.07386  	1   	0.125  	1.69x  	E  	0.3454371  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0051253  	negative regulation of RNA metabolic process  	4, 5, 6, 7, 8	1297 	0.074089  	1   	0.125  	1.69x  	E  	0.3459076  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0065009  	regulation of molecular function  	2	3322 	0.189764  	1   	0.125  	1.52x  	D  	0.3480462  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0051094  	positive regulation of developmental process  	2, 3, 4	1326 	0.075745  	1   	0.125  	1.65x  	E  	0.3492358  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0006793  	phosphorus metabolic process  	3	3300 	0.188507  	1   	0.125  	1.51x  	D  	0.3495134  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0007155  	cell adhesion  	2	1330 	0.075974  	1   	0.125  	1.65x  	E  	0.3496834  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0022610  	biological adhesion  	1	1338 	0.076431  	1   	0.125  	1.64x  	E  	0.3505705  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0006796  	phosphate-containing compound metabolic process  	4	3279 	0.187307  	1   	0.125  	1.5x  	D  	0.3508996  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0001775  	cell activation  	2	1368 	0.078145  	1   	0.125  	1.6x  	E  	0.3538003  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0010033  	response to organic substance  	3	3182 	0.181766  	1   	0.125  	1.45x  	D  	0.3571107  	1  	0.394808655347934  	 	 
+biological_process  	 GO:2000113  	negative regulation of cellular macromolecule biosynthetic process  	5, 6, 7	1403 	0.080144  	1   	0.125  	1.56x  	E  	0.3573782  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0120036  	plasma membrane bounded cell projection organization  	4	1409 	0.080487  	1   	0.125  	1.55x  	E  	0.3579714  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0045934  	negative regulation of nucleobase-containing compound metabolic process  	4, 5, 6	1414 	0.080772  	1   	0.125  	1.55x  	E  	0.3584611  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0048699  	generation of neurons  	5, 6, 7	1428 	0.081572  	1   	0.125  	1.53x  	E  	0.359811  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0030030  	cell projection organization  	3	1437 	0.082086  	1   	0.125  	1.52x  	E  	0.360662  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0010558  	negative regulation of macromolecule biosynthetic process  	4, 5, 6	1471 	0.084028  	1   	0.125  	1.49x  	E  	0.3637608  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0009892  	negative regulation of metabolic process  	2, 3, 4	3000 	0.17137  	1   	0.125  	1.37x  	D  	0.3678032  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0022008  	neurogenesis  	4, 5, 6	1523 	0.086999  	1   	0.125  	1.44x  	E  	0.3681515  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0031327  	negative regulation of cellular biosynthetic process  	4, 5, 6	1526 	0.08717  	1   	0.125  	1.43x  	E  	0.3683922  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0042981  	regulation of apoptotic process  	5, 6	1528 	0.087284  	1   	0.125  	1.43x  	E  	0.368552  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0043067  	regulation of programmed cell death  	4, 5	1544 	0.088198  	1   	0.125  	1.42x  	E  	0.369808  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0051239  	regulation of multicellular organismal process  	2, 3	2962 	0.169199  	1   	0.125  	1.35x  	D  	0.3698574  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0055085  	transmembrane transport  	4	1545 	0.088255  	1   	0.125  	1.42x  	E  	0.3698852  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0009890  	negative regulation of biosynthetic process  	3, 4, 5	1546 	0.088313  	1   	0.125  	1.42x  	E  	0.3699623  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0007267  	cell-cell signaling  	2, 3	1600 	0.091397  	1   	0.125  	1.37x  	E  	0.3739062  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0006811  	ion transport  	4	1607 	0.091797  	1   	0.125  	1.36x  	E  	0.3743865  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0051240  	positive regulation of multicellular organismal process  	2, 3, 4	1615 	0.092254  	1   	0.125  	1.35x  	E  	0.3749268  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0010605  	negative regulation of macromolecule metabolic process  	3, 4, 5	2807 	0.160345  	1   	0.125  	1.28x  	D  	0.3775076  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0010941  	regulation of cell death  	3, 4	1660 	0.094825  	1   	0.125  	1.32x  	E  	0.3777977  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0006952  	defense response  	3	1676 	0.095739  	1   	0.125  	1.31x  	E  	0.3787508  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0045595  	regulation of cell differentiation  	3, 4	1749 	0.099909  	1   	0.125  	1.25x  	E  	0.3826617  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0071310  	cellular response to organic substance  	4	2621 	0.14972  	1   	0.125  	1.2x  	D  	0.3849332  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0071702  	organic substance transport  	4	2619 	0.149606  	1   	0.125  	1.2x  	D  	0.3850015  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0009653  	anatomical structure morphogenesis  	2, 3	2611 	0.149149  	1   	0.125  	1.19x  	D  	0.3852719  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0050793  	regulation of developmental process  	2, 3	2533 	0.144693  	1   	0.125  	1.16x  	D  	0.3876833  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0009056  	catabolic process  	2	2499 	0.142751  	1   	0.125  	1.14x  	D  	0.3886019  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0031324  	negative regulation of cellular metabolic process  	3, 4, 5	2495 	0.142523  	1   	0.125  	1.14x  	D  	0.3887045  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0033554  	cellular response to stress  	3	1929 	0.110191  	1   	0.125  	1.13x  	E  	0.389424  	1  	0.394808655347934  	 	 
+biological_process  	 GO:1901566  	organonitrogen compound biosynthetic process  	4	1946 	0.111162  	1   	0.125  	1.12x  	E  	0.389864  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0009888  	tissue development  	3	1954 	0.111619  	1   	0.125  	1.12x  	E  	0.3900597  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0010629  	negative regulation of gene expression  	4, 5, 6	1978 	0.11299  	1   	0.125  	1.11x  	E  	0.3906041  	1  	0.394808655347934  	 	 
+biological_process  	 GO:2000026  	regulation of multicellular organismal development  	3, 4	1995 	0.113961  	1   	0.125  	1.1x  	E  	0.3909514  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0048468  	cell development  	3, 4	2012 	0.114932  	1   	0.125  	1.09x  	E  	0.3912672  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0051128  	regulation of cellular component organization  	3, 4	2360 	0.134811  	1   	0.125  	1.08x  	D  	0.3914576  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0051172  	negative regulation of nitrogen compound metabolic process  	3, 4, 5	2345 	0.133954  	1   	0.125  	1.07x  	D  	0.3916747  	1  	0.394808655347934  	 	 
+biological_process  	 GO:1901575  	organic substance catabolic process  	3	2053 	0.117274  	1   	0.125  	1.07x  	E  	0.3919021  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0048584  	positive regulation of response to stimulus  	2, 3, 4	2278 	0.130127  	1   	0.125  	1.04x  	D  	0.3924137  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0043933  	protein-containing complex subunit organization  	3	2104 	0.120187  	1   	0.125  	1.04x  	E  	0.3924485  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0071705  	nitrogen compound transport  	4	2216 	0.126585  	1   	0.125  	1.01x  	D  	0.3927488  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0044248  	cellular catabolic process  	3	2200 	0.125671  	1   	0.125  	1.01x  	D  	0.3927788  	1  	0.394808655347934  	 	 
+biological_process  	 GO:0009987  	cellular process  	1	15933 	0.910145  	8   	1  	1.1x  	E  	0.4707783  	1  	0.471991668853281  	 	 
+biological_process  	 GO:0008150  	biological_process  	0	17506 	1  	8   	1  	0  	=  	1  	1  	1  	 	 

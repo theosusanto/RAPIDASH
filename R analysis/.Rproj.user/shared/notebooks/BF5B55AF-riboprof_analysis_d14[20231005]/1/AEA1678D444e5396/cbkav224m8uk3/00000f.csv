@@ -1,0 +1,8 @@
+"0","translation_up <- all_fc_sig %>% filter(group == 2 & `RFP_Nterm-wt_sig` == 1) %>% dplyr::select(gene_name)"
+"0","translation_down <- all_fc_sig %>% filter(group == 2 & `RFP_Nterm-wt_sig` == -1) %>% dplyr::select(gene_name)"
+"0","all_genes <- all_fc_sig %>% dplyr::select(gene_name)"
+"0",""
+"0","# write.csv(translation_up, file = ""./output/hiND14_translation_up.csv"", row.names = FALSE)"
+"0","# write.csv(translation_down, file = ""./output/hiND14_translation_down.csv"", row.names = FALSE)"
+"0","# write.csv(all_genes, file = ""./output/hiND14_all_genes.csv"", row.names = FALSE)"
+"0",""

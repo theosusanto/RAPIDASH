@@ -1,0 +1,90 @@
+"0","fasta_path = ""ref/GRCh38.primary_assembly.genome.fa"""
+"0","gtf_path = ""ref/gencode.v43.primary_assembly.basic.annotation.gtf"""
+"0","codon_table <- read.table(file = ""codon_table.tsv"", sep = ""\t"", header=TRUE)"
+"0",""
+"0","codon_usage_psite_all <- codon_table"
+"0","codon_rank_psite_all <- codon_table"
+"0",""
+"0","for(n in names(reads_psite_list)) {"
+"0","  codon_usage <- codon_usage_psite(reads_psite_list, annotation = annotation_dt, "
+"0","                                   sample = n, fastapath = fasta_path, gtfpath = gtf_path, "
+"0","                                   fasta_genome = TRUE, refseq_sep = "" "", site = ""psite"")"
+"0","  codon_usage_psite_all <- left_join(codon_usage_psite_all,"
+"0","                                     codon_usage$dt[, .(codon, normalized_value)], by=""codon"")"
+"0","  normalized_value_index <- which(colnames(codon_usage_psite_all) == ""normalized_value"")"
+"0","  colnames(codon_usage_psite_all)[normalized_value_index] <- n"
+"0","  codon_rank_psite_all[[n]] <- rank(codon_usage_psite_all[[n]])"
+"0","}"
+"2","Import genomic features from the file as a GRanges object ... "
+"2","OK
+"
+"2","Prepare the 'metadata' data frame ... "
+"2","OK
+"
+"2","Make the TxDb object ... "
+"2","OK
+"
+"2","Warning: [38;5;232mVectorized input to `element_text()` is not officially supported.
+[36mℹ[38;5;232m Results may be unexpected or may change in future versions of ggplot2.[39m"
+"2","Import genomic features from the file as a GRanges object ... "
+"2","OK
+"
+"2","Prepare the 'metadata' data frame ... "
+"2","OK
+"
+"2","Make the TxDb object ... "
+"2","OK
+"
+"2","Warning: [38;5;232mVectorized input to `element_text()` is not officially supported.
+[36mℹ[38;5;232m Results may be unexpected or may change in future versions of ggplot2.[39m"
+"2","Import genomic features from the file as a GRanges object ... "
+"2","OK
+"
+"2","Prepare the 'metadata' data frame ... "
+"2","OK
+"
+"2","Make the TxDb object ... "
+"2","OK
+"
+"2","Warning: [38;5;232mVectorized input to `element_text()` is not officially supported.
+[36mℹ[38;5;232m Results may be unexpected or may change in future versions of ggplot2.[39m"
+"2","Import genomic features from the file as a GRanges object ... "
+"2","OK
+"
+"2","Prepare the 'metadata' data frame ... "
+"2","OK
+"
+"2","Make the TxDb object ... "
+"2","OK
+"
+"2","Warning: [38;5;232mVectorized input to `element_text()` is not officially supported.
+[36mℹ[38;5;232m Results may be unexpected or may change in future versions of ggplot2.[39m"
+"2","Import genomic features from the file as a GRanges object ... "
+"2","OK
+"
+"2","Prepare the 'metadata' data frame ... "
+"2","OK
+"
+"2","Make the TxDb object ... "
+"2","OK
+"
+"2","Warning: [38;5;232mVectorized input to `element_text()` is not officially supported.
+[36mℹ[38;5;232m Results may be unexpected or may change in future versions of ggplot2.[39m"
+"2","Import genomic features from the file as a GRanges object ... "
+"2","OK
+"
+"2","Prepare the 'metadata' data frame ... "
+"2","OK
+"
+"2","Make the TxDb object ... "
+"2","OK
+"
+"2","Warning: [38;5;232mVectorized input to `element_text()` is not officially supported.
+[36mℹ[38;5;232m Results may be unexpected or may change in future versions of ggplot2.[39m"
+"0","codon_usage_psite_all$wt_RFP_ave = rowMeans("
+"0","  codon_usage_psite_all[, c(""hiND14_wt_rep_1_RFP"", ""hiND14_wt_rep_2_RFP"", ""hiND14_wt_rep_3_RFP"")])"
+"0","codon_usage_psite_all$Nterm_RFP_ave = rowMeans("
+"0","  codon_usage_psite_all[, c(""hiND14_Nterm_rep_1_RFP"", ""hiND14_Nterm_rep_2_RFP"", ""hiND14_Nterm_rep_3_RFP"")])"
+"0","codon_usage_psite_all <- codon_usage_psite_all %>%"
+"0","  mutate(wt_RFP_ave_plot = wt_RFP_ave/max(codon_usage_psite_all$wt_RFP_ave),"
+"0","         Nterm_RFP_ave_plot = Nterm_RFP_ave/max(codon_usage_psite_all$Nterm_RFP_ave))"

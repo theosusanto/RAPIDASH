@@ -1,0 +1,8 @@
+"0",""
+"0","# run the linear model"
+"0",""
+"0","v_rna_fit = lmFit(v_rna, design_rna)"
+"0","v_rna_fit = contrasts.fit(v_rna_fit, contrasts=rna_de)"
+"0","e_rna_fit = eBayes(v_rna_fit)"
+"0","plotSA(e_rna_fit, main='Final model: Mean-variance trend')"
+"0",""

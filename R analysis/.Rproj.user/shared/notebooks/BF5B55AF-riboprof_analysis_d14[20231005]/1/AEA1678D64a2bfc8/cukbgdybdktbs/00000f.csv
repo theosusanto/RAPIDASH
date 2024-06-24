@@ -1,0 +1,7 @@
+"0","translation_tID <- all_fc_sig %>% filter(group == 2) %>% select(transcriptID)"
+"0","reads_psite_split_list <- list()"
+"0","for(name in names(reads_psite_list)) {"
+"0","  tibble_data <- separate(reads_psite_list[[name]], transcript,"
+"0","                          into = c(""transcript"", ""version""), sep = ""."")"
+"0","  reads_psite_split_list[[name]] <- tibble_data"
+"0","}  "

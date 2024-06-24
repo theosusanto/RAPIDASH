@@ -1,0 +1,7 @@
+"0","# Set TE"
+"0","data_all_te <- data_all"
+"0",""
+"0","# plot MDS -- not very informative since of course the 1st PC is RNA vs RPF"
+"0",""
+"0","lcpm_all = cpm(data_all, log=TRUE)"
+"0","plotMDS(lcpm, labels=rownames(data_all$samples))"

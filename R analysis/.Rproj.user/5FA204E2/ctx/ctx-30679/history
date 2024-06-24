@@ -1,0 +1,280 @@
+install.packages("installr")
+library(installr)
+updateR()
+install.packages("devtools")
+library(devtools)
+install_github("LabTranslationalArchitectomics/riboWaltz", dependencies = TRUE)
+install.packages("httpuv")
+install_github("LabTranslationalArchitectomics/riboWaltz", dependencies = TRUE)
+library(devtools)
+install_github("LabTranslationalArchitectomics/riboWaltz", dependencies = TRUE)
+library(riboWaltz)
+etwd()
+getwd()
+library(bioWaltz)
+library("riboWaltz")
+reads_list <- bamtolist(bamfolder = "./data", annotation = "gencode.v43.pc_transcripts.EnsemblCanonical.protein_coding_utr5_cds_utr3_length.tsv")
+reads_list <- bamtolist(bamfolder = "./data", annotation = "gencode.v43.pc_transcripts.EnsemblCanonical.protein_coding_utr5_cds_utr3_length_fulldesc.tsv")
+reads_list <- bamtolist(bamfolder = "./data", annotation = "gencode.v43.pc_transcripts.EnsemblCanonical.protein_coding_utr5_cds_utr3_length_fulldesc.tsv")
+phateR
+library(phateR)
+sample_dt <- as.data.table(GenomicAlignments::readGAlignments("./data/Nterm_RFP_dep_rep1_stage9resort.bam"))
+library("data.table")
+sample_dt <- as.data.table(GenomicAlignments::readGAlignments("./data/Nterm_RFP_dep_rep1_stage9resort.bam"))
+sample_dt
+length(unique(as.character(sample_dt$seqnames)))
+annotation_dt <- as.data.table("gencode.v43.pc_transcripts.EnsemblCanonical.protein_coding_utr5_cds_utr3_length_fulldesc.tsv")
+annotation_dt$V1
+annotation_dt
+annotation_dt <- read.table(file = "gencode.v43.pc_transcripts.EnsemblCanonical.protein_coding_utr5_cds_utr3_length_fulldesc.tsv", sep = "\t", header = TRUE)
+annotation_dt$transcript
+length(annotation_dt$transcript)
+length(intersect(unique(as.character(sample_dt$seqnames)), annotation_dt$transcript))
+length(unique(as.character(sample_dt$seqnames)))
+length(annotation_dt$transcript)
+length(intersect(unique(as.character(sample_dt$seqnames)), annotation_dt$transcript))
+reads_list <- bamtolist(bamfolder = "./data", annotation = annotation_dt)
+reads_list <- bamtolist(bamfolder = "./data", annotation = annotation_dt)
+reads_list <- bamtolist(bamfolder = "./data", annotation = annotation_dt)
+example_reads_list[["Samp_example"]]
+psite_offset <- psite(reads_list, flanking = 6, extremity = "auto")
+example_length_dist <- rlength_distr(reads_list, sample = "wt_RFP_dep_rep3_stage9resort")
+example_length_dist[["plot_wt_RFP_dep_rep3_stage9resort"]]
+example_length_dist_rep <- rlength_distr(reads_list,
+sample = list("Samp_avg" = c("Nterm_RFP_dep_rep1_stage9resort", "Nterm_RFP_dep_rep2_stage9resort", "Nterm_RFP_dep_rep3_stage9resort")),
+cl = 99, multisamples = "average",
+colour = "gray70")
+example_length_dist_rep[["plot"]]
+psite_offset <- psite(reads_list, flanking = 6, extremity = "auto")
+reads_psite_list <- psite_info(reads_list, psite_offset)
+codon_coverage_example <- codon_coverage(reads_psite_list, annotation_dt, psite = FALSE)
+annotation_dt$transcript
+codon_coverage_example <- codon_coverage(reads_psite_list, annotation_dt, psite = FALSE)
+reads_psite_list$Nterm_RFP_dep_rep1_stage9resort$transcript
+codon_coverage_example <- codon_coverage(reads_psite_list, annotation_dt, psite = FALSE)
+codon_coverage_example <- codon_coverage(reads_psite_list, annotation_dt)
+library(riboWaltz)
+annotation_dt = read.table(file = "gencode.v43.pc_transcripts.EnsemblCanonical.protein_coding_utr5_cds_utr3_length_fulldesc.tsv", sep = "\t", header = TRUE)
+reads_list <- bamtolist(bamfolder =  "./data/", annotation = annotation_dt)
+psite_offset <- psite(reads_list, flanking = 6, extremity = "auto")
+reads_psite_list <- psite_info(reads_list, psite_offset)
+codon_coverage_example <- codon_coverage(reads_psite_list, annotation_dt, psite = FALSE)
+annotation_dt <- read.table(file = "gencode.v43.pc_transcripts.EnsemblCanonical.protein_coding_utr5_cds_utr3_length.tsv", sep = "\t", header = TRUE)
+reads_list <- bamtolist(bamfolder =  "./data/", annotation = annotation_dt, refseq_sep = "|")
+psite_offset <- psite(reads_list, flanking = 6, extremity = "auto")
+reads_psite_list <- psite_info(reads_list, psite_offset)
+head(reads_psite_list$Nterm_RFP_dep_rep1_stage9resort)
+codon_coverage_example <- codon_coverage(reads_psite_list, annotation_dt, psite = FALSE)
+codon_coverage_example <- codon_coverage(reads_psite_list$Nterm_RFP_dep_rep1_stage9resort, annotation_dt, psite = FALSE)
+codon_coverage_example <- codon_coverage(reads_psite_list$Nterm_RFP_dep_rep1_stage9resort, annotation_dt, psite = FALSE)
+cds_coverage_example <- cds_coverage(reads_psite_list, annotation_dt)
+debug()
+debug(cds_coverage(reads_psite_list, annotation_dt))
+debug(cds_coverage)
+debug(cds_coverage)
+cds_coverage()
+annotation_dt[l_cds]
+cds_coverage()
+codon_coverage()
+codon_coverage()
+debug(codon_coverage)
+codon_coverage()
+codon_coverage_example <- codon_coverage(reads_psite_list, annotation_dt, psite = FALSE)
+if ((psite == TRUE || psite == T) & min_overlap != 1) {
+cat("\n")
+stop("invalid value for min_over when psite is TRUE\n\n")
+}
+if (length(sample) == 0) {
+sample <- names(data)
+}
+bin <- 3
+cat("1. creating codon table and computing distance from start/stop codon\n")
+l_transcripts <- as.character(annotation[l_utr5 > 0 & l_cds >
+0 & l_cds%%3 == 0 & l_utr3 > 0, transcript])
+undebug(codon_coverage)
+undebug(cds_coverage)
+as.character(annotation_dt[l_utr5 > 0 & l_cds > 0 & l_cds%%3 == 0 & l_utr3 > 0, transcript])
+annotation_dt[l_utr5 > 0 & l_cds > 0 & l_cds%%3 == 0 & l_utr3 > 0, transcript]
+[l_utr5 > 0 & l_cds > 0 & l_cds%%3 == 0 & l_utr3 > 0, transcript]
+annotation[transcript]
+annotation_dt[transcript]
+annotation_dt$transcript
+annotation_dt[transcript]
+as.data.frame(annotation_dt)
+annotation_dt <- as.data.frame(annotation_dt)
+annotation_dt[transcript]
+annotation_dt2 <- as.data.frame(annotation_dt)
+annotation_dt2[transcript]
+View(annotation_dt)
+mm81cdna
+annotation_dt
+mm81cdna
+typeof(mm81cdna)
+typeof(annotation_dt)
+class(annotation_dt)
+class(mm81cdna)
+setDT(annotation_dt)
+class(annotation_dt)
+annotation_dt
+annotation_dt[transcript]
+annotation_dt <- read.table(file = "gencode.v43.pc_transcripts.EnsemblCanonical.protein_coding_utr5_cds_utr3_length.tsv", sep = "\t", header = TRUE)
+setDT(annotation_dt)
+reads_list <- bamtolist(bamfolder = "data/", annotation = annotation_dt)
+reads_list <- bamtolist(bamfolder = "data/", annotation = annotation_dt, refseq_sep = "|")
+psite_offset <- psite(reads_list, flanking = 6, extremity = "auto")
+reads_psite_list <- psite_info(reads_list, psite_offset)
+codon_coverage_example <- codon_coverage(reads_psite_list, annotation_dt, psite = FALSE)
+cds_coverage_example <- cds_coverage(reads_psite_list, mm81cdna)
+cds_coverage_example <- cds_coverage(reads_psite_list, annotation_dt)
+example_ends_heatmap <- rends_heat(reads_list, annotation_dt, sample = "Nterm_RFP_dep_rep1_stage9resort", cl = 85,
+utr5l = 25, cdsl = 40, utr3l = 25)
+example_ends_heatmap[["plot"]]
+example_frames_stratified <- frame_psite_length(reads_psite_list, sample = "Nterm_RFP_dep_rep1_stage9resort",
+region = "all", cl = 90)
+example_frames_stratified[["plot"]]
+example_frames <- frame_psite(reads_psite_list, sample = "Nterm_RFP_dep_rep1_stage9resort", region = "all")
+example_frames[["plot"]]
+example_metaprofile <- metaprofile_psite(reads_psite_list, annotation_dt, sample = "Nterm_RFP_dep_rep1_stage9resort",
+utr5l = 20, cdsl = 40, utr3l = 20,
+plot_title = "sample.transcript")
+example_metaprofile[["plot_Nterm_RFP_dep_rep1_stage9resort"]]
+example_metaprofile[["plot_wt_RFP_dep_rep1_stage9resort"]]
+example_frames_stratified <- frame_psite_length(reads_psite_list, sample = "wt_RFP_dep_rep1_stage9resort",
++                                                 region = "all", cl = 90)
+example_frames_stratified <- frame_psite_length(reads_psite_list, sample = "wt_RFP_dep_rep1_stage9resort", region = "all", cl = 90)
+example_metaprofile[["plot_wt_RFP_dep_rep1_stage9resort"]]
+example_metaprofile <- metaprofile_psite(reads_psite_list, annotation_dt, sample = "wt_RFP_dep_rep1_stage9resort",
+utr5l = 20, cdsl = 40, utr3l = 20,
+plot_title = "sample.transcript")
+example_metaprofile[["plot_wt_RFP_dep_rep1_stage9resort"]]
+?psite
+load("~/GitHub/ribosome_profiling/R analysis/.RData")
+plot(cars)
+library(data.table)
+annotation_dt <- setDT(read.table(
+file = "gencode.v43.pc_transcripts.EnsemblCanonical.protein_coding_utr5_cds_utr3_length.tsv", sep = "\t", header = TRUE))
+library(data.table)
+annotation_dt <- setDT(read.table(
+file = "gencode.v43.pc_transcripts.EnsemblCanonical.protein_coding_utr5_cds_utr3_length.tsv", sep = "\t", header = TRUE))
+library(riboWaltz)
+reads_list <- bamtolist(bamfolder = "./data/", annotation = annotation_dt, refseq_sep = "|")
+psite_offset <- psite(reads_list, flanking = 6, extremity = "auto")
+reads_psite_list <- psite_info(reads_list, psite_offset)
+codon_coverage_example <- codon_coverage(reads_psite_list, annotation_dt, psite = FALSE)
+cds_coverage_example <- cds_coverage(reads_psite_list, annotation_dt)
+head(reads_list)
+reads_list$Nterm_RFP_dep_rep1_stage9resort$cds_stop
+# 20200825
+install.packages("ggplot2")
+install.packages("reshape2")
+install.packages("knitr")
+install.packages("devtools")
+#install_github("ggbiplot", "vqv")
+install_github("vqv/ggbiplot")
+require("ggplot2")
+require("reshape2")
+require("knitr")
+require("devtools")
+require("ggbiplot")
+library("ggfortify")
+require("dplyr")
+require("edgeR")
+require("RColorBrewer")
+require("gplots")
+directory <- "./data/"
+files <- list.files(path=directory, pattern="*_distance.txt", full.names=T, recursive=FALSE)
+files
+for(file in files){
+base <- basename(file)
+name <- tools::file_path_sans_ext(base)
+output <- paste(name, "plot", sep="_")
+distance_df <- read.table(file, sep="\t", stringsAsFactor=FALSE, header=FALSE, quote="", comment.char="")
+colnames(distance_df) <- c("read_length", "position", "UTR_col", "UTR_readcount", "CDS_col", "CDS_readcount")
+distance_df_UTR <- distance_df[c("read_length", "position", "UTR_readcount")]
+distance_df_CDS <- distance_df[c("read_length", "position", "CDS_readcount")]
+for(i in 25:38){
+df_UTR_temp <- distance_df_UTR[distance_df_UTR$read_length==i,]
+output_temp = paste(output, "UTR", i, sep="_")
+p <- ggplot(df_UTR_temp, aes(x=position, y=UTR_readcount))
+p <- p + geom_bar(stat="identity")
+p <- p + theme_bw()
+p <- p + ggtitle(output_temp) + theme(plot.title = element_text(size=6.5))
+output_path <- paste(directory, output_temp, sep="/")
+filename_full <- paste(output_path, "jpeg", sep=".")
+ggsave(filename_full, plot=p, device="jpeg")
+df_CDS_temp <- distance_df_CDS[distance_df_CDS$read_length==i,]
+output_temp = paste(output, "CDS", i, sep="_")
+p <- ggplot(df_CDS_temp, aes(x=position, y=CDS_readcount))
+p <- p + geom_bar(stat="identity")
+p <- p + theme_bw()
+p <- p + ggtitle(output_temp) + theme(plot.title = element_text(size=6.5))
+output_path <- paste(directory, output_temp, sep="/")
+filename_full <- paste(output_path, "jpeg", sep=".")
+ggsave(filename_full, plot=p, device="jpeg")
+}
+}
+require("ggplot2")
+require("reshape2")
+require("knitr")
+require("devtools")
+require("ggbiplot")
+library("ggfortify")
+require("dplyr")
+require("edgeR")
+require("RColorBrewer")
+require("gplots")
+install_github("vqv/ggbiplot")
+install.packages('ggfortify')
+BiocManager::install(c("edgeR"))
+# 20200825
+install.packages("ggplot2")
+install.packages("reshape2")
+require("ggplot2")
+require("reshape2")
+require("knitr")
+require("devtools")
+require("ggbiplot")
+library("ggfortify")
+require("dplyr")
+require("edgeR")
+require("RColorBrewer")
+require("gplots")
+directory <- "./data/"
+files <- list.files(path=directory, pattern="*_distance.txt", full.names=T, recursive=FALSE)
+for(file in files){
+base <- basename(file)
+name <- tools::file_path_sans_ext(base)
+output <- paste(name, "plot", sep="_")
+distance_df <- read.table(file, sep="\t", stringsAsFactor=FALSE, header=FALSE, quote="", comment.char="")
+colnames(distance_df) <- c("read_length", "position", "UTR_col", "UTR_readcount", "CDS_col", "CDS_readcount")
+distance_df_UTR <- distance_df[c("read_length", "position", "UTR_readcount")]
+distance_df_CDS <- distance_df[c("read_length", "position", "CDS_readcount")]
+for(i in 25:38){
+df_UTR_temp <- distance_df_UTR[distance_df_UTR$read_length==i,]
+output_temp = paste(output, "UTR", i, sep="_")
+p <- ggplot(df_UTR_temp, aes(x=position, y=UTR_readcount))
+p <- p + geom_bar(stat="identity")
+p <- p + theme_bw()
+p <- p + ggtitle(output_temp) + theme(plot.title = element_text(size=6.5))
+output_path <- paste(directory, output_temp, sep="/")
+filename_full <- paste(output_path, "jpeg", sep=".")
+ggsave(filename_full, plot=p, device="jpeg")
+df_CDS_temp <- distance_df_CDS[distance_df_CDS$read_length==i,]
+output_temp = paste(output, "CDS", i, sep="_")
+p <- ggplot(df_CDS_temp, aes(x=position, y=CDS_readcount))
+p <- p + geom_bar(stat="identity")
+p <- p + theme_bw()
+p <- p + ggtitle(output_temp) + theme(plot.title = element_text(size=6.5))
+output_path <- paste(directory, output_temp, sep="/")
+filename_full <- paste(output_path, "jpeg", sep=".")
+ggsave(filename_full, plot=p, device="jpeg")
+}
+}
+update.packages(ask = FALSE, checkBuilt = TRUE)
+save.image("C:/Users/teoth/Documents/GitHub/ribosome_profiling/R analysis/.RData")
+install.packages("ggplot2")
+install.packages("reshape2")
+install.packages("knitr")
+install.packages("devtools")
+#install_github("ggbiplot", "vqv")
+install_github("vqv/ggbiplot")

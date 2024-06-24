@@ -1,0 +1,40 @@
+"0","reads_psite_list <- psite_info(bam_list, offsets,"
+"0","                               fastapath = ""./ref/GRCh38.primary_assembly.genome.fa"", "
+"0","                               fasta_genome = TRUE, refseq_sep = "" "","
+"0","                               gtfpath = ""./ref/gencode.v43.primary_assembly.basic.annotation.gtf"")"
+"1","processing hiND14_Nterm_rep_1_RFP
+"
+"1","1. adding p-site position
+"
+"1","2. adding transcript region
+"
+"1","processing hiND14_Nterm_rep_2_RFP
+"
+"1","1. adding p-site position
+"
+"1","2. adding transcript region
+"
+"1","processing hiND14_Nterm_rep_3_RFP
+"
+"1","1. adding p-site position
+"
+"1","2. adding transcript region
+"
+"1","processing hiND14_wt_rep_1_RFP
+"
+"1","1. adding p-site position
+"
+"1","2. adding transcript region
+"
+"1","processing hiND14_wt_rep_2_RFP
+"
+"1","1. adding p-site position
+"
+"1","2. adding transcript region
+"
+"1","processing hiND14_wt_rep_3_RFP
+"
+"1","1. adding p-site position
+"
+"1","2. adding transcript region
+"

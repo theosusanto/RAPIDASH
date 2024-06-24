@@ -1,0 +1,332 @@
+---
+title: "Collate_rfp_cds_counts[20230523]"
+output: html_notebook
+---
+
+Load all the required packages:
+```{r}
+library(tidyr)
+library(dplyr)
+library(stringr)
+library(ggplot2)
+library(riboWaltz)
+```
+
+This notebook processes .bam files generated using STAR alignment against primary human GRCh38 GENCODE annotation.
+.bam files used are in ./data/Try2
+Trying with subsampled data i ./data/Try3
+
+I am using riboWaltz to process this data.
+I create annotation_dt using the human primary assembly basic annotation that I used to align my RFP data with STAR. I'm also loading the data and convert them into list.
+
+```{r}
+annotation_dt=create_annotation(gtfpath = "data/Try2/gencode.v43.primary_assembly.basic.annotation.gtf")
+bam_list <- bamtolist("data/Try3", annotation = annotation_dt, refseq_sep = "|")
+```
+
+I don't filter the reads because doing so causes me to lose 99% of the reads..
+The periodicity in this data is not good.
+
+```{r}
+# Try filter only read lengths that satisfy a periodicity threshold
+# (i.e. 70% of the reads fall in one of the three reading frames along the CDS)
+#filtered_bam_list <- length_filter(data = bam_list,
+#                                   length_filter_mode = "periodicity",
+#                                   periodicity_threshold = 70)
+# This doesn't seem to work? It threw away 99.9% of the reads. The reads kept have much longer length.
+# Apparently it is because I don't have good periodicity to begin with. RNAse or CHX might be an issue.
+```
+
+Call for psite, flanking = 6, extremity = "auto"
+Use default recommended settings:
+Also save the offsets per sample in a text file
+
+```{r}
+offsets <- psite(data = bam_list)
+samples <- unique(offsets$sample)
+for (i in 1:length(samples)) {
+  sam_offs <- subset(offsets, sample == samples[i], 
+                    select = c("length", "corrected_offset_from_3"))
+  colnames(sam_offs) <- c("length", "p_offset")
+  write.table(sam_offs, paste("output/Try3/", samples[i], "_p-site-offsets.tsv", sep=""), 
+              sep = "\t", row.names = FALSE)
+}
+```
+
+Get the main table of reads with psite information.
+Tried saving each psite list for each sample, but the filesize is way too big. Don't do it.
+
+```{r}
+reads_psite_list <- psite_info(bam_list, offsets,
+                               fastapath = "data/Try2/GRCh38.primary_assembly.genome.fa", 
+                               fasta_genome = TRUE, refseq_sep = " ",
+                               gtfpath = "data/Try2/gencode.v43.primary_assembly.basic.annotation.gtf")
+# reads_psite_list <- psite_info(bam_list, offsets, site=c("psite", "asite", "esite"),
+#                                fastapath = "data/Try2/GRCh38.primary_assembly.genome.fa",
+#                                fasta_genome = TRUE, refseq_sep = " ",
+#                                gtfpath = "data/Try2/gencode.v43.primary_assembly.basic.annotation.gtf")
+
+#for (i in 1:length(reads_psite_list)){
+#  sample_name <- names(reads_psite_list[i])
+#  write.table(reads_psite_list[i], paste("output/Try2/", sample_name, "_p-site-list.tsv", sep=""), 
+#              sep = "\t", row.names = FALSE)
+#}
+
+```
+
+Given that I'm interested to look at a-site codon usage, I'm filtering out all reads mapped to 3'utr, and those mapped right before the stop codon. 
+A lot of those reads threw an error unfortunately. The package is being updated
+
+```{r}
+for(n in names(reads_psite_list)) {
+  reads_psite_list[[n]] <- reads_psite_list[[n]][!which(reads_psite_list[[n]]$psite_region == "3utr")]
+  reads_psite_list[[n]] <- reads_psite_list[[n]][!which(reads_psite_list[[n]]$psite_region == "cds" & reads_psite_list[[n]]$end3 < reads_psite_list[[n]]$psite + 3)]
+  reads_psite_list[[n]] <- reads_psite_list[[n]][!is.na(reads_psite_list[[n]]$psite_region)]
+}
+```
+
+Checking for codon usage:
+
+p-site
+
+```{r}
+fasta_path = "data/Try2/GRCh38.primary_assembly.genome.fa"
+gtf_path = "data/Try2/gencode.v43.primary_assembly.basic.annotation.gtf"
+codon_table <- read.table(file = "codon_table.tsv", sep = "\t", header=TRUE)
+
+codon_usage_psite_all <- codon_table
+codon_rank_psite_all <- codon_table
+
+for(n in names(reads_psite_list)) {
+  codon_usage <- codon_usage_psite(reads_psite_list, annotation = annotation_dt, 
+                                   sample = n, fastapath = fasta_path, gtfpath = gtf_path, 
+                                   fasta_genome = TRUE, refseq_sep = " ", site = "psite")
+  codon_usage_psite_all <- left_join(codon_usage_psite_all,
+                                     codon_usage$dt[, .(codon, normalized_value)], by="codon")
+  normalized_value_index <- which(colnames(codon_usage_psite_all) == "normalized_value")
+  colnames(codon_usage_psite_all)[normalized_value_index] <- n
+  codon_rank_psite_all[[n]] <- rank(codon_usage_psite_all[[n]])
+}
+
+codon_usage_psite_all$wt_RFP_ave = rowMeans(
+  codon_usage_psite_all[, c("wt_RFP_1", "wt_RFP_2", "wt_RFP_3")])
+codon_usage_psite_all$Nterm_RFP_ave = rowMeans(
+  codon_usage_psite_all[, c("Nterm_RFP_1", "Nterm_RFP_2", "Nterm_RFP_3")])
+codon_usage_psite_all <- codon_usage_psite_all %>%
+  mutate(wt_RFP_ave_plot = wt_RFP_ave/max(codon_usage_psite_all$wt_RFP_ave),
+         Nterm_RFP_ave_plot = Nterm_RFP_ave/max(codon_usage_psite_all$Nterm_RFP_ave))
+```
+
+Trying to do wilcoxon rank-sum test:
+
+```{r}
+wt <- c(codon_rank_psite_all$wt_RFP_1, codon_rank_psite_all$wt_RFP_2, codon_rank_psite_all$wt_RFP_3)
+Nterm <- c(codon_rank_psite_all$Nterm_RFP_1, codon_rank_psite_all$Nterm_RFP_2, codon_rank_psite_all$Nterm_RFP_3)
+wilcox.test(wt, Nterm)
+```
+
+a-site.
+
+```{r}
+fasta_path = "data/Try2/GRCh38.primary_assembly.genome.fa"
+gtf_path = "data/Try2/gencode.v43.primary_assembly.basic.annotation.gtf"
+codon_table <- read.table(file = "codon_table.tsv", sep = "\t", header=TRUE)
+
+codon_usage_asite_all <- codon_table
+
+for(n in names(reads_psite_list)) {
+  codon_usage <- codon_usage_psite(reads_psite_list, annotation = annotation_dt, 
+                                   sample = n, fastapath = fasta_path, gtfpath = gtf_path, 
+                                   fasta_genome = TRUE, refseq_sep = " ", site = "asite")
+  codon_usage_asite_all <- left_join(codon_usage_asite_all,
+                                     codon_usage$dt[, .(codon, normalized_value)], by="codon")
+  normalized_value_index <- which(colnames(codon_usage_asite_all) == "normalized_value")
+  colnames(codon_usage_asite_all)[normalized_value_index] <- n
+}
+
+codon_usage_asite_all$wt_RFP_ave = rowMeans(
+  codon_usage_asite_all[, c("wt_RFP_1", "wt_RFP_2", "wt_RFP_3")])
+codon_usage_asite_all$Nterm_RFP_ave = rowMeans(
+  codon_usage_asite_all[, c("Nterm_RFP_1", "Nterm_RFP_2", "Nterm_RFP_3")])
+codon_usage_asite_all <- codon_usage_asite_all %>%
+  mutate(wt_RFP_ave_plot = wt_RFP_ave/max(codon_usage_asite_all$wt_RFP_ave),
+         Nterm_RFP_ave_plot = Nterm_RFP_ave/max(codon_usage_asite_all$Nterm_RFP_ave))
+```
+
+Do a scatter plot with linear model fitting
+
+```{r}
+bs <- 25
+label_number <- 5
+#plot_df <- codon_usage_psite_all
+plot_df <- codon_usage_asite_all
+setDT(plot_df)
+plot_df <- plot_df[order(wt_RFP_ave_plot)][, `:=`(codon, factor(codon, levels = codon))]
+
+correlation <- round(cor(plot_df$wt_RFP_ave_plot, 
+                         plot_df$Nterm_RFP_ave_plot), 3)
+
+fit <- lm(plot_df$Nterm_RFP_ave_plot ~ plot_df$wt_RFP_ave_plot)
+outlier_tab <- data.table(predict.lm(fit, interval = "confidence", level = 0.95))[, `:=`(codon, plot_df$codon)][, `:=`(Nterm_RFP_ave_plot, plot_df$Nterm_RFP_ave_plot)][Nterm_RFP_ave_plot < lwr | Nterm_RFP_ave_plot > upr]
+outlier_cod <- as.character(outlier_tab[, `:=`(max_dist, min(abs(Nterm_RFP_ave_plot - lwr), 
+                                                             abs(Nterm_RFP_ave_plot - upr))), 
+                                        by = 1:nrow(outlier_tab)][order(-max_dist)][1:label_number, codon])
+lab_table <- plot_df[, `:=`(codon_out, "")][as.character(codon) %in% outlier_cod, `:=`(codon_out, codon)
+                                               ][, `:=`(aa_out, "")][codon_out != "", `:=`(aa_out, aa)]
+
+ggplot(plot_df, aes(x = wt_RFP_ave_plot, y=Nterm_RFP_ave_plot)) +
+  geom_smooth(method = "lm", se = TRUE, color = "gray80", fill = "gray80", linetype= 1,
+              formula = y ~ x, level = 0.95, fullrange = TRUE) +
+  geom_point(alpha = 0.5, size = bs* 0.14) +
+  theme_bw(base_size = bs) +
+  theme(legend.position = "top", legend.margin = margin(0,0,0,0),
+        legend.box.margin = margin(5,0,-15,0)) +
+  theme(legend.text = element_text(margin = margin(l = -12, unit = "pt"))) +
+  theme(panel.grid.minor.y = element_blank(), panel.grid.minor.x = element_blank()) +
+  scale_x_continuous(name = "LLPH wt", limits = c(-0.3, 1.3), 
+                     breaks = c(0, 0.25, 0.5, 0.75, 1), expand = c(0, 0)) +
+  scale_y_continuous(name = "LLPH Nterm", limits = c(-0.3, 1.3), 
+                     breaks = c(0, 0.25, 0.5, 0.75, 1), expand = c(0, 0)) +
+  coord_cartesian(xlim = c(-0.05, 1.05), ylim = c(-0.05, 1.05)) +
+  annotate("text", x = 1, y = 0, label = paste0("R=", correlation), 
+           vjust = -0.2, size = bs * 0.2, hjust = 1, color = "black") +
+  geom_abline(intercept = 0, slope = 1, color = "red") +
+  ggrepel::geom_text_repel(data = lab_table, aes(label = codon_out), show.legend = F)
+
+#ggsave("Nterm_vs_wt_codon_psite.pdf")
+#ggsave("Nterm_vs_wt_codon_asite.pdf")
+
+```
+Try between wt, check for a-site:
+
+```{r}
+bs <- 25
+label_number <- 10
+plot_df <- codon_usage_psite_all
+#plot_df <- codon_usage_asite_all
+setDT(plot_df)
+plot_df <- plot_df[order(Nterm_RFP_1)][, `:=`(codon, factor(codon, levels = codon))]
+
+correlation <- round(cor(plot_df$Nterm_RFP_1, 
+                         plot_df$Nterm_RFP_2), 3)
+
+fit <- lm(plot_df$Nterm_RFP_2 ~ plot_df$Nterm_RFP_1)
+outlier_tab <- data.table(predict.lm(fit, interval = "confidence", level = 0.95))[, `:=`(codon, plot_df$codon)][, `:=`(Nterm_RFP_2, plot_df$Nterm_RFP_2)][Nterm_RFP_2 < lwr | Nterm_RFP_2 > upr]
+outlier_cod <- as.character(outlier_tab[, `:=`(max_dist, min(abs(Nterm_RFP_2 - lwr), 
+                                                             abs(Nterm_RFP_2 - upr))), 
+                                        by = 1:nrow(outlier_tab)][order(-max_dist)][1:label_number, codon])
+lab_table <- plot_df[, `:=`(codon_out, "")][as.character(codon) %in% outlier_cod, `:=`(codon_out, codon)
+                                               ][, `:=`(aa_out, "")][codon_out != "", `:=`(aa_out, aa)]
+
+ggplot(plot_df, aes(x = Nterm_RFP_1, y=Nterm_RFP_2)) +
+  geom_smooth(method = "lm", se = TRUE, color = "gray80", fill = "gray80", linetype= 1,
+              formula = y ~ x, level = 0.95, fullrange = TRUE) +
+  geom_point(alpha = 0.5, size = bs* 0.14) +
+  theme_bw(base_size = bs) +
+  theme(legend.position = "top", legend.margin = margin(0,0,0,0),
+        legend.box.margin = margin(5,0,-15,0)) +
+  theme(legend.text = element_text(margin = margin(l = -12, unit = "pt"))) +
+  theme(panel.grid.minor.y = element_blank(), panel.grid.minor.x = element_blank()) +
+  annotate("text", x = 1, y = 0, label = paste0("R=", correlation), 
+           vjust = -0.2, size = bs * 0.2, hjust = 1, color = "black") +
+  geom_abline(intercept = 0, slope = 1, color = "red") +
+  ggrepel::geom_text_repel(data = lab_table, aes(label = codon_out), show.legend = F)
+
+```
+
+
+Check how the reads are distributed for a given transcript.
+
+```{r}
+# To plot read counts against position given a particular gene in a given sample:
+transcript_id = "ENST00000519479.2"
+reads_psite_sample = "wt_RFP_1"
+
+# Get the read counts for a given p-siste position of a specific transcript in a given sample.
+psite_counts <- reads_psite_list[[reads_psite_sample]][
+  reads_psite_list[[reads_psite_sample]]$transcript == transcript_id ,
+  ]$psite
+
+# Convert counts table to data frame, change the column names.
+counts <- as.data.frame(table(psite_counts))
+colnames(counts) <- c("Position", "ReadCount")
+
+# Generate a sequence of numbers from 0 or min. number to the max. number.
+counts$Position <- as.numeric(as.character(counts$Position))
+number_range <- seq(pmin(min(counts$Position), 0), max(counts$Position))
+
+# Complete the data frame with missing numbers and set their counts to 0.
+# Normalize ReadCount with the size of the library.
+nrow_reads = nrow(reads_psite_list[[reads_psite_sample]])
+counts_complete <- counts %>%
+  complete(Position = number_range) %>%
+  replace_na(list(ReadCount = 0)) %>%
+  mutate(ReadCount = ReadCount / nrow_reads * 1000000)
+
+# Parse information about genotype, rfp/rna, and rep number.
+genotype <- ""
+if (grepl("wt", reads_psite_sample)) genotype = "wt" else genotype = "Nterm"
+rfp_or_rna  <- ""
+if (grepl("rfp", reads_psite_sample)) rfp_or_rna = "RFP" else rfp_or_rna = "RNA"
+rep_number <- ""
+if (grepl("rep", reads_psite_sample)) {
+  # Extract the number immediately following "rep"
+  rep_number <- str_extract(reads_psite_sample, "(?<=rep)\\d+")
+  }
+# Combine the genotype, rfp/rna, and rep number information into a new sample name.
+sample_name = paste(genotype, rfp_or_rna, rep_number, sep = "_")
+
+p <- ggplot(counts_complete, aes(x = Position, y = ReadCount)) +
+  geom_line() +
+  labs(x = "position", y = "read count", title = paste(transcript_id, " read counts in ", sample_name), sep = "") +
+  theme_bw() + 
+  theme(panel.grid.minor = element_blank()) +
+  coord_cartesian(ylim = c(0,1))
+
+#Limit max position to 5000 for ZNF562
+#Limit max position to 500 for LLPH
+#Limit max position to 350 for SNURF
+#Limit max position to 300 for SEM1
+
+#ggsave(filename = paste("output/Try2/", transcript_id, "_", sample_name, ".png", sep =""), plot = p, width = 8, height = 4, dpi = 600)
+```
+
+Checking read length distribution.
+It seemed that for wild type average, I have longer read length overall compared to Nterm average.
+Nevertheless, the median for both is between 28-29.
+
+```{r}
+sample_list <- list("wt_avg" = c("wt_RFP_1", "wt_RFP_2", "wt_RFP_3"), 
+                    "Nterm_avg" = c("Nterm_RFP_1", "Nterm_RFP_2", "Nterm_RFP_3"))
+
+length_dist_dodged <- rlength_distr(bam_list, 
+                                    sample = sample_list, cl = 99,
+                                    multisamples = "average",
+                                    plot_style = "dodged",
+                                    colour = c("dodgerblue", "gray70"))
+length_dist_dodged[["plot"]] 
+
+```
+Checking for trinucleotide periodicity.
+Generally the P-site signal is a bit low..
+
+```{r}
+example_frames_stratified <- frame_psite_length(reads_psite_list, sample = "Nterm_RFP_3",
+                                                region = "all", cl = 90)
+example_frames_stratified[["plot"]]
+```
+Check for metaprofile psite as a representative of trinucleotide periodicity across all start codons.
+
+```{r}
+sample_list <- list("wt_avg" = c("wt_RFP_1", "wt_RFP_2", "wt_RFP_3"), 
+                    "Nterm_avg" = c("Nterm_RFP_1", "Nterm_RFP_2", "Nterm_RFP_3"))
+example_metaprofile_overlaid <- metaprofile_psite(reads_psite_list, annotation_dt, 
+                                                  sample = sample_list, 
+                                                  multisamples = "average", plot_style = "overlaid",
+                                                  utr5l = 20, cdsl = 40, utr3l = 20,
+                                                  frequency = TRUE, plot_title = "transcript",
+                                                  colour = c("aquamarine4", "gray70"))
+example_metaprofile_overlaid[["plot"]]
+```
+
+

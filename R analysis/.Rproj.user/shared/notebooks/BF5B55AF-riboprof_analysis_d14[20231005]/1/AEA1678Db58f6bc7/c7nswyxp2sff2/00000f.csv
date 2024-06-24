@@ -1,0 +1,156 @@
+"0","annotation_dt=create_annotation(gtfpath = ""ref/gencode.v43.primary_assembly.basic.annotation.gtf"")"
+"2","Registered S3 methods overwritten by 'dbplyr':
+  method         from
+  print.tbl_lazy     
+  print.tbl_sql      
+"
+"2","Import genomic features from the file as a GRanges object ... "
+"2","OK
+"
+"2","Prepare the 'metadata' data frame ... "
+"2","OK
+"
+"2","Make the TxDb object ... "
+"2","Warning: The ""phase"" metadata column contains non-NA values for features of type stop_codon.
+  This information was ignored."
+"2","OK
+"
+"0","bam_list <- bamtolist(""data/20230722_hiND14"", annotation = annotation_dt, refseq_sep = ""|"")"
+"1","Reading hiND14_Nterm_rep_1_RFP.bam
+"
+"1","Input reads: 91.422 M
+"
+"1","Good! Number of indel below indel_threshold for all reads. No reads removed.
+"
+"1","Great! All reads' reference transcript IDs were found in the annotation table. No reads removed.
+"
+"1","1.435 M  (1.569 %) reads removed: mapping on negative strand.
+"
+"1","Output reads: 89.988 M
+"
+"1","Done!"
+"1"," "
+"1","hiND14_Nterm_rep_1_RFP.bam"
+"1"," "
+"1","has been loaded as"
+"1"," "
+"1","hiND14_Nterm_rep_1_RFP"
+"1"," "
+"1","
+
+"
+"1","Reading hiND14_Nterm_rep_2_RFP.bam
+"
+"1","Input reads: 94.250 M
+"
+"1","Good! Number of indel below indel_threshold for all reads. No reads removed.
+"
+"1","Great! All reads' reference transcript IDs were found in the annotation table. No reads removed.
+"
+"1","1.575 M  (1.671 %) reads removed: mapping on negative strand.
+"
+"1","Output reads: 92.675 M
+"
+"1","Done!"
+"1"," "
+"1","hiND14_Nterm_rep_2_RFP.bam"
+"1"," "
+"1","has been loaded as"
+"1"," "
+"1","hiND14_Nterm_rep_2_RFP"
+"1"," "
+"1","
+
+"
+"1","Reading hiND14_Nterm_rep_3_RFP.bam
+"
+"1","Input reads: 112.040 M
+"
+"1","Good! Number of indel below indel_threshold for all reads. No reads removed.
+"
+"1","Great! All reads' reference transcript IDs were found in the annotation table. No reads removed.
+"
+"1","1.747 M  (1.559 %) reads removed: mapping on negative strand.
+"
+"1","Output reads: 110.294 M
+"
+"1","Done!"
+"1"," "
+"1","hiND14_Nterm_rep_3_RFP.bam"
+"1"," "
+"1","has been loaded as"
+"1"," "
+"1","hiND14_Nterm_rep_3_RFP"
+"1"," "
+"1","
+
+"
+"1","Reading hiND14_wt_rep_1_RFP.bam
+"
+"1","Input reads: 104.543 M
+"
+"1","Good! Number of indel below indel_threshold for all reads. No reads removed.
+"
+"1","Great! All reads' reference transcript IDs were found in the annotation table. No reads removed.
+"
+"1","1.409 M  (1.348 %) reads removed: mapping on negative strand.
+"
+"1","Output reads: 103.134 M
+"
+"1","Done!"
+"1"," "
+"1","hiND14_wt_rep_1_RFP.bam"
+"1"," "
+"1","has been loaded as"
+"1"," "
+"1","hiND14_wt_rep_1_RFP"
+"1"," "
+"1","
+
+"
+"1","Reading hiND14_wt_rep_2_RFP.bam
+"
+"1","Input reads: 127.907 M
+"
+"1","Good! Number of indel below indel_threshold for all reads. No reads removed.
+"
+"1","Great! All reads' reference transcript IDs were found in the annotation table. No reads removed.
+"
+"1","1.463 M  (1.144 %) reads removed: mapping on negative strand.
+"
+"1","Output reads: 126.444 M
+"
+"1","Done!"
+"1"," "
+"1","hiND14_wt_rep_2_RFP.bam"
+"1"," "
+"1","has been loaded as"
+"1"," "
+"1","hiND14_wt_rep_2_RFP"
+"1"," "
+"1","
+
+"
+"1","Reading hiND14_wt_rep_3_RFP.bam
+"
+"1","Input reads: 100.809 M
+"
+"1","Good! Number of indel below indel_threshold for all reads. No reads removed.
+"
+"1","Great! All reads' reference transcript IDs were found in the annotation table. No reads removed.
+"
+"1","1.583 M  (1.571 %) reads removed: mapping on negative strand.
+"
+"1","Output reads: 99.226 M
+"
+"1","Done!"
+"1"," "
+"1","hiND14_wt_rep_3_RFP.bam"
+"1"," "
+"1","has been loaded as"
+"1"," "
+"1","hiND14_wt_rep_3_RFP"
+"1"," "
+"1","
+
+"

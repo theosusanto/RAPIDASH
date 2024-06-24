@@ -1,0 +1,4 @@
+"0","# shortcut for finding the rowname corresponding to a gene"
+"0","rownames(v_te$E)[grep('SNURF', rownames(v_te$E))]"
+"1","character(0)
+"

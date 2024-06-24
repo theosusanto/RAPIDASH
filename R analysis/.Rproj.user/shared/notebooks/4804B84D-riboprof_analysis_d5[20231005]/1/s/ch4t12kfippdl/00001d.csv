@@ -1,0 +1,7 @@
+"0",""
+"0","# run the linear model"
+"0",""
+"0","v_rfp_fit = lmFit(v_rfp, design_rfp)"
+"0","v_rfp_fit = contrasts.fit(v_rfp_fit, contrasts=rfp_de)"
+"0","e_rfp_fit = eBayes(v_rfp_fit)"
+"0","plotSA(e_rfp_fit, main='Final model: Mean-variance trend')"

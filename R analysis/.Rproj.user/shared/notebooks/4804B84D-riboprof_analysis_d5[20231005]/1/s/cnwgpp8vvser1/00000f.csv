@@ -1,0 +1,6 @@
+"0","# shortcut for finding the rowname corresponding to a gene"
+"0","rownames(v_te$E)[grep('ELMO1', rownames(v_te$E))]"
+"1","[1]"
+"1"," ""ELMO1_ENST00000310758"""
+"1","
+"

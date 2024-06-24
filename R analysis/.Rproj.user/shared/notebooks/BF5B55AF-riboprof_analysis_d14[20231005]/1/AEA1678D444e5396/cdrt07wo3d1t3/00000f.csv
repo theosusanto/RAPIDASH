@@ -1,0 +1,7 @@
+"0","# shortcut for finding the rowname corresponding to a gene"
+"0","# EGR1"
+"0","rownames(v_te$E)[grep('COL9A3', rownames(v_te$E))]"
+"1","[1]"
+"1"," ""COL9A3_ENSG00000092758_ENST00000649368"""
+"1","
+"

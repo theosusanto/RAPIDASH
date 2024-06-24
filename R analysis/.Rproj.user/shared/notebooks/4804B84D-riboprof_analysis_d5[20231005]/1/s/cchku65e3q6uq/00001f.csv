@@ -1,0 +1,8 @@
+"0","# make contrasts"
+"0",""
+"0","rna_de = makeContrasts(lineNterm-linewt,"
+"0","                       levels=colnames(design_rna))"
+"0",""
+"0","# perform voom"
+"0",""
+"0","v_rna = voom(data_rna, design_rna, plot=TRUE)"
